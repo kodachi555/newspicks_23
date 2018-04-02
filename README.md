@@ -33,7 +33,7 @@
 - has_many :picks
 
 
-##picksテーブル
+## picksテーブル
 
 |Column|Type|Option|
 |------|----|------|
