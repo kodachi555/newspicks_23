@@ -26,7 +26,7 @@
 |Column|Type|Option|
 |------|----|------|
 |title|String|index :true, null: false|
-|image_urg|String||
+|image_url|String||
 |page_url|String||
 
 ### Association
