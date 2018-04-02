@@ -38,7 +38,7 @@
 |Column|Type|Option|
 |------|----|------|
 |comment|text||
-|news_id|integer|foreign_key :true|
+|product_id|integer|foreign_key :true|
 |user_id|integer|foreign_key :true|
 
 ### Association
