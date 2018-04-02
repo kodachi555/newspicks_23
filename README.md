@@ -1,24 +1,46 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|name|String|index: true, null: false|
+|email|String|null: false, unique: true|
 
-Things you may want to cover:
+### Association
+- has_many :picks
+- has_many :follows
 
-* Ruby version
 
-* System dependencies
+## followsテーブル
 
-* Configuration
+|Column|Type|Option|
+|------|----|------|
+|user_id|integer|foreigh_key :true|
+|follow_user_id|integer|foreign_keu :true|
 
-* Database creation
+### Associpation
+- belongs_to :user
 
-* Database initialization
 
-* How to run the test suite
+## productsテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+|Column|Type|Option|
+|------|----|------|
+|title|String|index :true, null: false|
+|image_urg|String||
+|page_url|String||
 
-* Deployment instructions
+### Association
+- has_many :picks
 
-* ...
+
+##picksテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|comment|text||
+|news_id|integer|foreign_key :true|
+|user_id|integer|foreign_key :true|
+
+### Association
+- belongs_to :user
+- belongs_to :product
