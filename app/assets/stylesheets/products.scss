@@ -1,0 +1,113 @@
+.main-header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: #15274D;
+  line-height: 50px;
+  display: flex;
+  .left-area {
+    width: 33%;
+    float: left;
+    display: flex;
+    .menu{
+      margin-top: 10px;
+      padding: 0 20px;
+      img{
+        width: 28px;
+        height: 32px;
+      }
+    }
+    .search-bar{
+      margin: auto 0;
+      form {
+        border: none;
+        border-radius: 30px;
+        box-shadow: none;
+        box-sizing: 25px;
+        height: 30px;
+        width: 25vh;
+        margin: auto 0;
+        background: rgba(100, 100, 100, 0.5);
+        margin: auto 0;
+        display: flex;
+        img {
+          padding-left: 10px;
+          margin-top: 7px;
+          width: 16px;
+          height: 16px;
+        }
+        .search__query {
+          width: 20vh;
+          padding-left: 10px;
+          color: #ccd4de;
+          background-color: transparent;
+          border: none;
+          outline: none;
+        }
+      }
+      form:hover {
+        background: rgba(100, 100, 100, 0.7);
+      }
+    }
+  }
+  .center-area {
+    width: 33%;
+    text-align: center;
+    margin-top: 6px;
+    .newspicks-logo{
+      img{
+        width: 104px;
+        height: auto;
+      }
+    }
+  }
+  .right-area {
+    width: 33%;
+    float: right;
+    display: flex;
+    margin-right: 35px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-left: 10%;
+    .user-bar {
+      padding: 2px 0;
+      display: flex;
+      color: #ccd4de;
+      &__left {
+        margin-top: 10px;
+        img{
+          width: 32px;
+        }
+      }
+      &__right {
+        margin: auto 0;
+        margin-left: 5px;
+        .right-top {
+          line-height: 18px;
+          font-size: 11px;
+          padding-top: 7px;
+        }
+        .right-bottom {
+          background-color: #3a476b;
+          line-height: 18px;
+          font-size: 8px;
+          transform: scale(0.8);
+        }
+      }
+    }
+    .notification-bar {
+      margin-top: 7px;
+      img{
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .item-pick {
+      margin-top: 7px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
