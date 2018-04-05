@@ -1,3 +1,160 @@
 // Place all the styles related to the settings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.settings{
+  background-color: rgb(200, 200, 200);
+  float: right;
+  width:calc(100% - 192px);
+  margin-top: 50px;
+  height: auto;
+  &__contents{
+    margin: 24px 32px 0 24px;
+    &__main{
+      margin:0 auto;
+      width: 844px;
+    }
+  }
+}
+
+.name-registration{
+  background-color: white;
+  vertical-align: middle;
+  height: 104px;
+  width: 100vw;
+  display: table-cell;
+  &__left{
+    width: 556px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 72px;
+    p{
+      font-size: 14px;
+    }
+  }
+  &__right{
+    display: inline-block;
+    border: 1px solid #54AB23;
+    color: #54AB23;
+    width:136px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+  }
+}
+
+.setting-container{
+  width:844px;
+  margin-top: 10px;
+  margin-bottom: 48px;
+  background-color: white;
+  padding: 72px 72px 104px;
+  h1{
+    padding: 0 0 24px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+}
+.setting-form{
+  padding-top: 24px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.form-field{
+  margin-bottom: 32px;
+  label{
+    width: 232px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+}
+
+.cover{
+  position: relative;
+  display: inline-block;
+  img{
+    width: 65px;
+    min-height: 65px;
+    vertical-align: middle;
+  }
+  button{
+    margin-left: 16px;
+    border: 1px solid #EFEFEF;
+    background-color: #EFEFEF;
+    cursor: pointer;
+    color: #666;
+    border-radius: 2px;
+    transition: all .1s linear;
+    width: 78px;
+    height: 38px;
+  }
+}
+
+.short{
+  width:226px;
+  border: none;
+}
+
+.setting-buttons{
+  margin: 32px auto 40px;
+  button{
+    width: 144px;
+    height: 48px;
+    font-size: 14px;
+    position: relative;
+    left: 237px;
+    border: 1px solid #37509C;
+    background-color: #FFF;
+    color: #37509C;
+    transition: all .1s linear;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+}
+
+.unregister{
+  width:100%;
+  height: 55px;
+  &__link{
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    height: 40px;
+    width: 348px;
+    padding: 12px 24px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    float: right;
+    transition: all .15s linear;
+  }
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+.cf::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.texc{
+  text-align: center;
+}
+
+.texo{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
