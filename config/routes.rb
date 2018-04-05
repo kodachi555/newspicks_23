@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # idを含まない単数形のresource
   resource :settings, only: [:index] do
     collection do
-      get :profile ,:mail,:password,:subscriptionns,:mute,:social,:query,:newsletters,:scout
+      get :profile ,:mail,:password,:subscriptions,:mute,:social,:query,:newsletters,:scout
     end
   end
 end

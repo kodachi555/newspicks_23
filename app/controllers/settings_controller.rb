@@ -8,7 +8,7 @@ class SettingsController < ApplicationController
   def password
   end
 
-  def subscriptionns
+  def subscriptions
   end
 
   def mute
@@ -25,5 +25,5 @@ class SettingsController < ApplicationController
 
   def scout
   end
-  
+
 end

@@ -104,7 +104,6 @@
     margin-left: 16px;
     border: 1px solid #EFEFEF;
     background-color: #EFEFEF;
-    cursor: pointer;
     color: #666;
     border-radius: 2px;
     transition: all .1s linear;
@@ -149,6 +148,26 @@
   }
 }
 
+.subscription-setting{
+
+}
+.serial-code-setting{
+  margin-top: 80px;
+  button{
+    border: 1px solid #37509C;
+    background-color: #FFF;
+    color: #37509C;
+    border-radius: 2px;
+    transition: all .1s linear;
+    float: right;
+    padding: 10px 20px;
+    margin-left: 16px;
+  }
+}
+
+button{
+  cursor: pointer;
+}
 
 *{
   box-sizing: border-box;
