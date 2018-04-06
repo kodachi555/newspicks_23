@@ -1,13 +1,15 @@
 // Place all the styles related to the settings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body{
+  height: 100%;
+}
 .settings{
   background-color: rgb(200, 200, 200);
   float: right;
   width:calc(100% - 192px);
   margin-top: 50px;
-  height:calc(100% - 50px);
+  // height:100%;
   &__contents{
     margin: 24px 32px 0 24px;
     &__main{
@@ -180,8 +182,55 @@
     padding:0px;
   }
   .description{
-        padding: 8px 0 24px;
+    padding: 8px 0 24px;
   }
+}
+
+.setting-social{
+  .setting-form{
+    position: relative;
+  }
+  .social-connect{
+    position: relative;
+    padding: 24px 0;
+    border-bottom: 1px solid #EAEAEA;
+
+    button{
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -20px;
+      height: 40px;
+      width: 96px;
+      border: 1px solid #EAEAEA;
+      background: #FFF;
+      color: #999;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      outline: 0;
+    }
+  }
+  .bottom-item{
+    margin-top: 80px;
+    padding: 0 0 24px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .share-url{
+    position: relative;
+    padding: 24px 0 8px;
+    border-bottom: 1px solid #EAEAEA;
+    input{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 8px 2px 0;
+      vertical-align: middle;
+      background-size: cover;
+    }
+  }
+
 }
 
 button{
