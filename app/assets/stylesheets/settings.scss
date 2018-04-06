@@ -5,11 +5,11 @@ body{
   height: 100%;
 }
 .settings{
-  background-color: rgb(200, 200, 200);
+  background-color: #EFEFEF;
   float: right;
   width:calc(100% - 192px);
   margin-top: 50px;
-  // height:100%;
+  height:100%;
   &__contents{
     margin: 24px 32px 0 24px;
     &__main{
@@ -230,8 +230,43 @@ body{
       background-size: cover;
     }
   }
-
 }
+
+.link{
+  margin: 12px 0;
+  color: #37509C;
+  font-size: 12px;
+  .add-link{
+    margin-left: auto;
+    display: table;
+    .add-icon{
+      display: table-cell;
+      vertical-align: middle;
+      height: 20px;
+      width: 20px;
+      border: 1px solid #37509C;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      font-weight: 300;
+      text-align: center;
+    }
+    .add-text{
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 8px;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+  .nothing{
+    font-size: 14px;
+    font-weight: 600;
+    color: #999;
+    margin-top: 52px;
+  }
+}
+
 
 button{
   cursor: pointer;
