@@ -1,0 +1,26 @@
+= render partial: "news/main-header"
+= render partial: "news/side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+
+      .setting-container
+        %h1 メールマガジン購読設定
+        .setting-form
+          .error-message-new{style:"display: none;"}
+          .news-letter
+            .name 注目ニュース
+            %button{class:"enabled",newslettercategoryid:"1"} 購読中
+          .news-letter
+            .name 編集部おすすめ特集
+            %button{class:"enabled",newslettercategoryid:"2"} 購読中
+          .news-letter
+            .name イベントのご案内
+            %button{class:"enabled",newslettercategoryid:"3"} 購読中
+          .news-letter
+            .name ジョブオファー
+            %button{class:"enabled",newslettercategoryid:"4"} 購読中
+          .news-letter
+            .name ブランドアカウント
+            %button{class:"enabled",newslettercategoryid:"5"} 購読中

@@ -9,7 +9,6 @@ body{
   float: right;
   width:calc(100% - 192px);
   margin-top: 50px;
-  height:100%;
   &__contents{
     margin: 24px 32px 0 24px;
     &__main{
@@ -267,6 +266,31 @@ body{
   }
 }
 
+.news-letter{
+  position: relative;
+  padding: 24px 0;
+  border-bottom: 1px solid #EAEAEA;
+  button{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -20px;
+    height: 40px;
+    width: 96px;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    color: #999;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    outline: 0;
+  }
+  button.enabled{
+    border-color: #15274D;
+    color: #FFF;
+    background: #15274D;
+  }
+}
 
 button{
   cursor: pointer;
