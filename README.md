@@ -4,6 +4,10 @@
 |------|----|-------|
 |name|String|index: true, null: false|
 |email|String|null: false, unique: true|
+|icon|Text|
+|company name|String|
+|position|String|
+|profile|String|
 
 ### Association
 - has_many :picks
