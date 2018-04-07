@@ -12,6 +12,7 @@
 ### Association
 - has_many :picks
 - has_many :follows
+- has_many :likes
 
 
 ## followsテーブル
@@ -48,3 +49,14 @@
 ### Association
 - belongs_to :user
 - belongs_to :product
+- has_many :likes
+
+## Likesテーブル
+|Column|Type|Option|
+|------|----|------|
+|user_id|integer|null: false,foreign_key: true|
+|pick_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :pick
