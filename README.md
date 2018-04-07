@@ -2,7 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|String|index: true, null: false|
+|first_name|String|index: true, null: false|
+|second_name|String|index: true, null: false|
 |email|String|null: false, unique: true|
 |icon|Text|
 |company name|String|
