@@ -34,9 +34,11 @@
 |title|String|index :true, null: false|
 |image_url|String||
 |page_url|String||
+|category_id|integer|null: false, foreign_key :true|
 
 ### Association
 - has_many :picks
+- belongs_to :category
 
 
 ## picksテーブル
@@ -61,3 +63,11 @@
 ### Association
 - belongs_to :user
 - belongs_to :pick
+
+## categorysテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|String|null: false|
+
+### Association
+- has_many :products
