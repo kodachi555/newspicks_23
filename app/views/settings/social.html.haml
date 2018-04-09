@@ -22,6 +22,7 @@
             %h1.bottom-item Pick時にシェアするURLを指定
           .setting-form
             .share-url
+              %input#share-newspicks{id:"share-newspicks", name:"shareUrlTypes",type:"radio",value:"newspicks",checked:"checked"}
               = label_tag(:'share-newspicks' ,"コメント一覧ページをシェア")
             .share-url
               %input#share-newspicks{id:"share-original", name:"shareUrlTypes",type:"radio",value:"original",checked:"checked"}
