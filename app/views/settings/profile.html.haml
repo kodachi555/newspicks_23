@@ -17,26 +17,26 @@
         .setting-form
           .error-message
           .form-field
-            %label{for:"cover"} アイコン
+            = label_tag(:cover ,"アイコン")
             .cover
               = image_tag ""
               %button{type:"button"} 変更する
           .form-field
-            %label{for:"userName"} ユーザID
+            = label_tag(:userName ,"ユーザID")
             %input{class:"short" ,disabled:"" ,id:"userName" ,name:"userName" ,type:"text" ,value:"ユーザID"}
           .form-field
-            %label{for:"userId"} サポートID
+            = label_tag(:userId ,"サポートID")
             %input{class:"short" ,disabled:"" ,id:"userId" ,name:"userId" ,type:"text" ,value:"サポートID"}
             %div
               %p ※ サポートデスクへのお問合せ時は、こちらをお伝え頂くとスムーズにご案内できます。
           .form-field
-            %label{for:"lastName"} 名前
+            = label_tag(:lastName ,"名前")
           .form-field
-            %label{for:"company"} 会社名
+            = label_tag(:company ,"会社名")
           .form-field
-            %label{for:"title"} 役職
+            = label_tag(:title ,"役職")
           .form-field
-            %label{for:"profile"} プロフィール
+            = label_tag(:profile ,"プロフィール")
           .setting-buttons
             %button.saveBtn{type: "button"} 保存する
           %input{id:"mailAddress" ,name:"mailAddress" ,type:"hidden" ,value:"UserEmailAdress"}

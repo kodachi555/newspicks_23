@@ -8,14 +8,14 @@
         %h1 メールアドレス設定
         .setting-form
           .form-field
-            %label{for:"currentMailAddress"} 現在のメールアドレス
+            = label_tag(:currentMailAddress ,"現在のメールアドレス")
             %input{disabled:"" ,id:"currentMailAddress" ,name:"currentMailAddress" ,type:"text" ,value:"ユーザのメールアドレス"}
           .error-message-new{style:"display: none;"}
           .form-field
-            %label{for:"newMailAdressConfirm"} ユーザID
-            %input{id:"newMailAdressConfirm" ,name:"newMailAdressConfirm" ,type:"text" }
+            = label_tag(:newMailAdress ,"新しいメールアドレス")
+            %input{id:"newMailAdress" ,name:"newMailAdress" ,type:"text" }
           .form-field
-            %label サポートID
-            %input{id:"userId" ,name:"userId" ,type:"text" }
+            = label_tag(:newMailAdressConfirm ,"確認")
+            %input{id:"newMailAdressConfirm" ,name:"newMailAdressConfirm" ,type:"text" }
         .setting-buttons
           %button.saveBtn{type: "button"} 保存する
