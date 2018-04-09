@@ -39,3 +39,17 @@
 ### Association
 - has_many :picks
 - belongs_to :category
+
+
+## picksテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|comment|text||
+|product_id|integer|foreign_key :true|
+|user_id|integer|foreign_key :true|
+
+### Association
+- belongs_to :user
+- belongs_to :product
+- has_many :likes
