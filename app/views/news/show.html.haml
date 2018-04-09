@@ -22,16 +22,16 @@
             .icon_image
               = image_tag "time.png"
               .caption 2時間
-        %a.read-more{:href => "#"} 続きを読む
+        = link_to '続きを読む', '#' , class: 'read-more'
     .news_comment
       .news_comment-wrap
-        .comment_area
+        .commentarea
           %form{:action => ""}
-            .comment_area-left
+            .commentarea__left
               = image_tag "publisher.a6ed8ad6.png"
-              .comment-container
+              .comment__container
                 %textarea{placeholder: "コメントを書く (任意)"}
-            .comment_area-right
+            .commentarea__right
               .description シェアする
               .sns.twitter
                 = image_tag "twitter.png"
@@ -46,26 +46,26 @@
               .comment_container
                 .comment-container-wrap
                   %div
-                    .comment_container-header
-                      .comment_container-headerLeft
-                        %a{:href => "#"}
+                    .comment_container__header
+                      .comment_container__header--left
+                        = link_to do
                           .image
                         .user-profile
-                          %a{:href => "#"}
+                          = link_to do
                             %h3.name
                               蛯原 健
                           .job
                             リブライトパートナーズ 代表パートナー
                             %span 2時間前
-                      .comment_container-headerRight
+                      .comment_container__header--ight
                         .drop-down-button
                           %div ⋮
-                  .comment_text-wrap
-                    .comment_text
+                  .comment_text
+                    .comment_text-wrap
                       90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
                     .like-panel
-                      .like-wrapper
-                        .like
+                      .like
+                        .like-wrapper
                           = image_tag "like.png"
                           .count 10
                           .like-label Likes
@@ -73,26 +73,26 @@
               .comment_container
                 .comment-container-wrap
                   %div
-                    .comment_container-header
-                      .comment_container-headerLeft
-                        %a{:href => "#"}
+                    .comment_container__header
+                      .comment_container__header--left
+                        = link_to do
                           .image
                         .user-profile
-                          %a{:href => "#"}
+                          = link_to do
                             %h3.name
                               蛯原 健
                           .job
                             リブライトパートナーズ 代表パートナー
                             %span 2時間前
-                      .comment_container-headerRight
+                      .comment_container__header--right
                         .drop-down-button
                           %div ⋮
-                  .comment_text-wrap
-                    .comment_text
+                  .comment_text
+                    .comment_text-wrap
                       90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
                     .like-panel
-                      .like-wrapper
-                        .like
+                      .like
+                        .like-wrapper
                           = image_tag "like.png"
                           .count 10
                           .like-label Likes
@@ -100,26 +100,26 @@
               .comment_container
                 .comment-container-wrap
                   %div
-                    .comment_container-header
-                      .comment_container-headerLeft
-                        %a{:href => "#"}
+                    .comment_container__header
+                      .comment_container__header--left
+                        = link_to do
                           .image
                         .user-profile
-                          %a{:href => "#"}
+                          = link_to do
                             %h3.name
                               蛯原 健
                           .job
                             リブライトパートナーズ 代表パートナー
                             %span 2時間前
-                      .comment_container-headerRight
+                      .comment_container__header--right
                         .drop-down-button
                           %div ⋮
-                  .comment_text-wrap
-                    .comment_text
+                  .comment_text
+                    .comment_text-wrap
                       90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
                     .like-panel
-                      .like-wrapper
-                        .like
+                      .like
+                        .like-wrapper
                           = image_tag "like.png"
                           .count 10
                           .like-label Likes
