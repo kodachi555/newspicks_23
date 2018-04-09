@@ -20,8 +20,8 @@
 
 |Column|Type|Option|
 |------|----|------|
-|user_id|integer|foreigh_key :true|
-|follow_user_id|integer|foreign_keu :true|
+|user_id|integer|foreign_key :true|
+|follow_user_id|integer|foreign_key :true|
 
 ### Associpation
 - belongs_to :user
