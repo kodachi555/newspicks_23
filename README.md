@@ -63,3 +63,11 @@
 ### Association
 - belongs_to :user
 - belongs_to :pick
+
+## categorysテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|String|null: false|
+
+### Association
+- has_many :products
