@@ -12,14 +12,14 @@
 
     .menu-items
       %span.menu-header アカウント
-      %a.menu-item{href:"/settings/profile/"} ユーザ情報
-      %a.menu-item{href:"/settings/mail/"} メールアドレス設定
-      %a.menu-item{href:"/settings/password/"} パスワード設定
+      = link_to "ユーザ情報" ,profile_settings_path ,class: "menu-item"
+      = link_to "メールアドレス設定" ,mail_settings_path ,class: "menu-item"
+      = link_to "パスワード設定" ,password_settings_path ,class: "menu-item"
       %span.menu-header 有料サービス
-      %a.menu-item{href:"/settings/subscriptions/"} 登録中のプラン
+      = link_to "登録中のプラン" ,subscriptions_settings_path ,class: "menu-item"
       %span.menu-header 機能設定
-      %a.menu-item{href:"/settings/mute/"} 非表示コメント
-      %a.menu-item{href:"/settings/social/"} 外部サービス設定
-      %a.menu-item{href:"/settings/query/"} キーワード設定
-      %a.menu-item{href:"/settings/newsletters/"} メールマガジン購読設定
-      %a.menu-item{href:"/settings/scout/"} 求人応募情報
+      = link_to "非表示コメント" ,mute_settings_path ,class: "menu-item"
+      = link_to "外部サービス設定" ,social_settings_path ,class: "menu-item"
+      = link_to "キーワード設定" ,query_settings_path ,class: "menu-item"
+      = link_to "メールマガジン購読設定" ,newsletters_settings_path ,class: "menu-item"
+      = link_to "求人応募情報" ,scout_settings_path ,class: "menu-item"
