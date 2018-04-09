@@ -25,3 +25,17 @@
 
 ### Associpation
 - belongs_to :user
+
+
+## productsテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|title|String|index :true, null: false|
+|image_url|String||
+|page_url|String||
+|category_id|integer|null: false, foreign_key :true|
+
+### Association
+- has_many :picks
+- belongs_to :category
