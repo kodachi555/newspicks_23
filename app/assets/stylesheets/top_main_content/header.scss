@@ -1,0 +1,114 @@
+.top-main-content {
+  background-color: #EFEFEF;
+  width: 100%;
+  height: 9800px;
+  padding: 50px 0 0 192px;
+  box-sizing: border-box;
+  z-index: 0;
+  overflow: auto;
+  position: relative;
+  .header {
+    min-height: 400px;
+    box-sizing: border-box;
+    display: block;
+    display: flex;
+    background-color: #000;
+    &__left {
+      position: relative;
+      width: 70%;
+      color: #FFF;
+      font-family: sans-serif;
+      img {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        opacity: .7;
+      }
+      .text-area {
+        position: absolute;
+        width: 94%;
+        right: 5%;
+        left: 5.4%;
+        bottom: 10%;
+        .top-space {
+          width: 80px;
+          height: 32px;
+          text-align: center;
+          border: 1px solid #FFF;
+          margin-bottom: 8px;
+          .count-picks {
+            padding-top: 8px;
+            display: inline-block;
+            font-size: 10px;
+          }
+        }
+        .center-main-space {
+          width: 80%;
+          font-size: 24px;
+          letter-spacing:  1px;
+          margin-bottom: 4px;
+          max-height: 65px;
+          font-weight: bold;
+        }
+        .bottom-space {
+          display: flex;
+          .picks-time {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    &__left:hover {
+      img {
+        opacity: 0.4;
+      }
+    }
+    &__right {
+      padding-left: 1px;
+      min-width: 30%;
+      color: #FFF;
+      .top, .bottom{
+        height: 50%;
+        position: relative;
+        img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          opacity: .7;
+        }
+        .text-area {
+          position: absolute;
+          width: 94%;
+          right: 5%;
+          left: 5.4%;
+          bottom: 20%;
+          .top-space {
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            //line-height: relative;
+            border: 1px solid #FFF;
+            margin-bottom: 4px;
+            .count-picks {
+              font-size: 4px;
+              display: inline-block;
+            }
+          }
+          .center-main-space {
+            width: 80%;
+            font-size: 6px;
+            letter-spacing:  1px;
+            margin-bottom: 2px;
+            max-height: 32px;
+            font-weight: bold;
+          }
+        }
+      }
+      .top:hover, .bottom:hover {
+        img {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
