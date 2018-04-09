@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :news
 
   # idを含まない単数形のresource
-  resource :settings, only: [:index] do
+  resource :settings, only: [] do
     collection do
       get :profile ,:mail,:password,:subscriptions,:mute,:social,:query,:newsletters,:scout
     end
