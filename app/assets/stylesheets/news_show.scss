@@ -34,7 +34,7 @@ hr {
       background-position: center;
       background-size: cover;
       z-index: 0;
-      &__pick {
+      .news_detail__pick {
         width: 81px;
         height: 31px;
         line-height: 31px;
@@ -47,7 +47,7 @@ hr {
         color: #FFF;
         z-index: 1;
       }
-     &__--cover {
+     .news_detail__pick--cover {
         background-color: #000;
         opacity: .3;
         position: absolute;
@@ -72,7 +72,7 @@ hr {
 
 .news {
   padding: 16px 32px 24px;
-  &_text {
+  .news_text {
     .title {
       line-height: 1.4;
       margin: 0;
@@ -85,7 +85,7 @@ hr {
 
 .meta {
     display: flex;
-  &__block {
+  .meta__block {
     margin-top: 10px;
     .icon_image {
       display: flex;
@@ -128,25 +128,25 @@ hr {
 
 .news_comment {
   width: 656px;
-  &-wrap {
+  .news_comment-wrap {
     margin-top: 8px;
     padding: 24px 32px 24px;
     background-color: #FFF;
   }
 }
 
-.commentarea {
+.comment_area {
   display: flex;
   form {
     display: flex;
     justify-content: space-between;
-  .commentarea__left {
+  .comment_area-left {
     display: flex;
     img {
       width: 40px;
       height: 40px;
     }
-    .comment__container {
+    .comment-container {
       textarea {
         resize: none;
         width: 276px;
@@ -160,7 +160,7 @@ hr {
     }
   }
 }
-  .commentarea__right {
+  .comment_area-right {
     margin-left: 50px;
     display: flex;
     align-items: center;
@@ -196,15 +196,16 @@ hr {
   }
   .comment_container {
     margin-top: 16px;
-    &__-wrap {
+    .comment-container-wrap {
       position: relative;
     }
   }
 }
 
-.comment_container__header {
+.comment_container-header {
   display: flex;
-  &--left {
+  // align-items: center;
+  .comment_container-headerLeft {
     display: flex;
     align-items: center;
     a {
@@ -241,7 +242,7 @@ hr {
       }
     }
   }
-  &--right {
+  .comment_container-headerRight {
     .drop-down-button {
       position: absolute;
       top: 10px;
@@ -267,11 +268,11 @@ hr {
   }
 }
 
-.comment_text {
+.comment_text-wrap {
     margin: 8px 0;
     position: relative;
     min-height: 48px;
-  &-wrap {
+  .comment_text {
     width: 532px;
     padding-left: 56px;
     display: block;
@@ -291,11 +292,11 @@ hr {
     bottom: 0;
     text-align: center;
     width: 34px;
-    .like {
+    .like-wrapper {
       display: table;
       width: 100%;
       height: 100%;
-      &-wrapper {
+      .like {
         display: table-cell;
         vertical-align: middle;
         cursor: pointer;
