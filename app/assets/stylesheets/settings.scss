@@ -127,6 +127,13 @@ a {
   input[disabled]{
     border: none;
   }
+  .forget-password{
+    margin-top: 4px;
+    margin-left: 240px;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #666;
+  }
 }
 
 .cover{
@@ -260,6 +267,12 @@ a {
       vertical-align: middle;
       background-size: cover;
     }
+  }
+}
+
+.subscription-setting{
+  a.here{
+    color: #337ab7;
   }
 }
 
