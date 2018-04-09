@@ -7,4 +7,32 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .main-header
+      .left-area
+        .menu
+          = image_tag "humberger.de26402b.png"
+        .search-bar
+          = form_tag('/news/search', method: :get) do
+            = image_tag "ic_search.a18e89c7.png"
+            %input.search__query{name: "keyword", placeholder: "検索する", type: "text", value: ""}
+      .center-area
+        .newspicks-logo
+          = link_to root_path do
+            = image_tag "logo_type.086ed6f5.png"
+      .right-area
+        .user-bar
+          .user-bar__left
+            = image_tag "cover.png"
+          .user-bar__right
+            .right-top
+              山田太郎
+            .right-bottom
+              学生会員
+        .notification-bar
+          = link_to "" do
+            = image_tag "flag.b91825e7.png"
+        .item-pick
+          = link_to "" do
+            = image_tag "pen.181d3e93.png"
     = yield
+
