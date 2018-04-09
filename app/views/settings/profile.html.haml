@@ -1,0 +1,48 @@
+= render partial: "news/main-header"
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+
+      .name-registration
+        .name-registration__left
+          %p.main
+            実名登録が完了していません
+          %p.sub
+            登録すると自分のコメントをフォロワー以外にも公開できます。
+        .name-registration__right
+          実名を登録する
+
+      .setting-container
+        %h1 アカウント設定
+        .setting-form
+          .error-message
+          .form-field
+            %label{for:"cover"} アイコン
+            .cover
+              %img
+              %button{type:"button"} 変更する
+          .form-field
+            %label{for:"userName"} ユーザID
+            %input{class:"short" ,disabled:"" ,id:"userName" ,name:"userName" ,type:"text" ,value:"ユーザID"}
+          .form-field
+            %label{for:"userId"} サポートID
+            %input{class:"short" ,disabled:"" ,id:"userId" ,name:"userId" ,type:"text" ,value:"サポートID"}
+            %div
+              %p ※ サポートデスクへのお問合せ時は、こちらをお伝え頂くとスムーズにご案内できます。
+          .form-field
+            %label{for:"lastName"} 名前
+          .form-field
+            %label{for:"company"} 会社名
+          .form-field
+            %label{for:"title"} 役職
+          .form-field
+            %label{for:"profile"} プロフィール
+          .setting-buttons
+            %button.saveBtn{type: "button"} 保存する
+          %input{id:"mailAddress" ,name:"mailAddress" ,type:"hidden" ,value:"UserEmailAdress"}
+          %hr.separator
+          .unregister
+            .unregister__link
+              NewsPicksのアカウントを完全に削除する

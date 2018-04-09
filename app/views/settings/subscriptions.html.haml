@@ -1,0 +1,30 @@
+= render partial: "news/main-header"
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+
+      .setting-container
+        .subscription-setting
+          %h1 登録中のプラン
+          .setting-form
+            .premium-form
+              .form-field
+                %label.label ステータス
+                %input{disabled:"",type:"text",value:"未登録(無料会委員)"}
+              .form-field
+                %label.label 支払い方法
+                %input{disabled:"",type:"text",value:"-"}
+              %div
+                有料サービスの一覧については
+                %a{class:"here",href:"/subscription/"} こちら
+                からご確認頂けます
+
+        .serial-code-setting
+          %h1 購入したシリアルコードを入力する
+          .setting-form
+          .error-message{style:"display: none;"}
+          .form-field
+            %input#serialCode{placeholder:"シリアルコードを入力",type:"text"}
+            %button#userSerialCode{type:"button"} コードを使う

@@ -1,0 +1,34 @@
+= render partial: "news/main-header"
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+
+      .setting-social
+        .setting-container
+          %h1 外部サービス連携
+          .setting-form
+            .social-connect.fb
+              .icon
+                .img
+              .name Facebook連携
+              %button.connected 連携する
+          .setting-form
+            .social-connect.tw.last
+              .icon
+                .img
+              .name Twitter連携
+              %button.connected 連携する
+            %h1.bottom-item Pick時にシェアするURLを指定
+          .setting-form
+            .share-url
+              %input#share-newspicks{name:"shareUrlTypes",type:"radio",value:"newspicks",checked:"checked"}
+              %label{for:"share-newspicks"}
+                %span
+                  コメント一覧ページをシェア
+            .share-url
+              %input#share-newspicks{name:"shareUrlTypes",type:"radio",value:"newspicks",checked:"checked"}
+              %label{for:"share-newspicks"}
+                %span
+                  記事ページをシェア

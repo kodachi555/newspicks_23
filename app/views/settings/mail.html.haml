@@ -1,0 +1,22 @@
+= render partial: "news/main-header"
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+
+      .setting-container
+        %h1 メールアドレス設定
+        .setting-form
+          .form-field
+            %label{for:"currentMailAddress"} 現在のメールアドレス
+            %input{disabled:"" ,id:"currentMailAddress" ,name:"currentMailAddress" ,type:"text" ,value:"ユーザのメールアドレス"}
+          .error-message-new{style:"display: none;"}
+          .form-field
+            %label{for:"newMailAdressConfirm"} ユーザID
+            %input{id:"newMailAdressConfirm" ,name:"newMailAdressConfirm" ,type:"text" }
+          .form-field
+            %label サポートID
+            %input{id:"userId" ,name:"userId" ,type:"text" }
+        .setting-buttons
+          %button.saveBtn{type: "button"} 保存する
