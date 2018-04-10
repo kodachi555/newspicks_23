@@ -110,6 +110,10 @@ a {
     width:226px;
     border: none;
   }
+  .top{
+    vertical-align: top;
+    margin-top: 8px;
+  }
   label{
     width: 232px;
     display: inline-block;
@@ -126,6 +130,16 @@ a {
   }
   input[disabled]{
     border: none;
+  }
+  textarea{
+    height: 156px;
+    width: 463px;
+    resize: none;
+    border: 1px solid #EAEAEA;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
   }
   .forget-password{
     margin-top: 4px;

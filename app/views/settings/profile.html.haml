@@ -22,24 +22,28 @@
               = image_tag ""
               %button{type:"button"} 変更する
           .form-field
-            = label_tag(:userName ,"ユーザID")
-            %input{class:"short" ,disabled:"" ,id:"userName" ,name:"userName" ,type:"text" ,value:"ユーザID"}
+            = label_tag(:user_id ,"ユーザID")
+            = text_field(:user ,:id ,class:"short" ,value:"カレントユーザのID" ,disabled:"")
           .form-field
-            = label_tag(:userId ,"サポートID")
-            %input{class:"short" ,disabled:"" ,id:"userId" ,name:"userId" ,type:"text" ,value:"サポートID"}
+            = label_tag(:user_support ,"サポートID")
+            = text_field(:user ,:support ,class:"short" ,value:"カレントユーザのサポートID" ,disabled:"")
             %div
               %p ※ サポートデスクへのお問合せ時は、こちらをお伝え頂くとスムーズにご案内できます。
           .form-field
-            = label_tag(:lastName ,"名前")
+            = label_tag(:user_name ,"名前")
+            = text_field(:user ,:name ,value:"カレントユーザの名前")
           .form-field
-            = label_tag(:company ,"会社名")
+            = label_tag(:user_company ,"会社名")
+            = text_field(:user ,:company ,value:"カレントユーザの会社名")
           .form-field
-            = label_tag(:title ,"役職")
+            = label_tag(:user_title ,"役職")
+            = text_field(:user ,:title ,value:"カレントユーザの役職")
           .form-field
-            = label_tag(:profile ,"プロフィール")
+            = label_tag(:user_profile ,"プロフィール" ,class:"top")
+            = text_area(:user ,:profile ,maxlength:"2000" ,value:"カレントユーザのプロフィール")
           .setting-buttons
             %button.saveBtn{type: "button"} 保存する
-          %input{id:"mailAddress" ,name:"mailAddress" ,type:"hidden" ,value:"UserEmailAdress"}
+          = hidden_field(:user ,:mail ,value:"カレントユーザのメールアドレス")
           %hr.separator
           .unregister
             .unregister__link
