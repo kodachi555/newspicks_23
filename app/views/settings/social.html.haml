@@ -12,18 +12,18 @@
               .icon
                 = image_tag ""
               .name Facebook連携
-              = button_tag "連携する" ,class:"connected"
+              = button_tag "連携する", class:"connected"
           .setting-form
             .social-connect.tw.last
               .icon
                 = image_tag ""
               .name Twitter連携
-              = button_tag "連携する" ,class:"connected"
+              = button_tag "連携する", class:"connected"
             %h1.bottom-item Pick時にシェアするURLを指定
           .setting-form
             .share-url
-              = radio_button(:share ,:urlTypes ,:newspicks ,checked:"checked")
-              = label_tag(:'share-urlTypes-newspicks' ,"コメント一覧ページをシェア")
+              = radio_button(:share, :urlTypes, :newspicks, checked:"checked")
+              = label_tag(:'share-urlTypes-newspicks', "コメント一覧ページをシェア")
             .share-url
-              = radio_button(:share ,:urlTypes ,:original ,checked:"checked")
-              = label_tag(:'share-urlTypes-original' ,"記事ページをシェア")
+              = radio_button(:share, :urlTypes, :original, checked:"checked")
+              = label_tag(:'share-urlTypes-original', "記事ページをシェア")

@@ -17,7 +17,7 @@
                 %input{disabled:"",type:"text",value:"-"}
               %div
                 有料サービスの一覧については
-                = link_to "こちら" ,"#" ,class: "here"
+                = link_to "こちら", "#", class: "here"
                 からご確認頂けます
         .serial-code-setting
           %h1 購入したシリアルコードを入力する
@@ -25,4 +25,4 @@
           .error-message{style:"display: none;"}
           .form-field
             %input#serialCode{placeholder:"シリアルコードを入力",type:"text"}
-            = button_tag "コードを使う" ,type:"button" ,id:"userSerialCode"
+            = button_tag "コードを使う", type:"button", id:"userSerialCode"

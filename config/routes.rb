@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :settings, only: [] do
     collection do
-      get :profile ,:mail ,:password ,:subscriptions ,:mute ,:social ,:query ,:newsletters ,:scout
+      get :profile, :mail, :password, :subscriptions, :mute, :social, :query, :newsletters, :scout
     end
   end
 end
