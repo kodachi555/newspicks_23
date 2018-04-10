@@ -2,379 +2,379 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here : http : //sass-lang.com/
 body {
-  height : 100% ;
-  font-size : 14px ;
+  height : 100%;
+  font-size : 14px;
 }
 
 a {
-    color : inherit ;
-    text-decoration : none ;
-    outline : 0 ;
+    color : inherit;
+    text-decoration : none;
+    outline : 0;
 }
 
 .menu-items {
-  overflow-y : auto ;
-  position : absolute ;
-  top : 110px ;
-  left : 0 ;
-  right : 0 ;
-  bottom : 0 ;
+  overflow-y : auto;
+  position : absolute;
+  top : 110px;
+  left : 0;
+  right : 0;
+  bottom : 0;
   .menu-header {
-    display : block ;
-    font-size : 10px ;
-    font-weight : 700 ;
-    color : #777f97 ;
-    border-bottom : 1px solid #EAEAEA ;
-    padding : 32px 16px 8px 24px ;
+    display : block;
+    font-size : 10px;
+    font-weight : 700;
+    color : #777f97;
+    border-bottom : 1px solid #EAEAEA;
+    padding : 32px 16px 8px 24px;
   }
   .menu-item {
-    display : block ;
-    padding : 16px 16px 16px 24px ;
-    border-bottom : 1px solid #EAEAEA ;
-    cursor : pointer ;
+    display : block;
+    padding : 16px 16px 16px 24px;
+    border-bottom : 1px solid #EAEAEA;
+    cursor : pointer;
     .active {
-      font-weight : 700 ;
-      color : #15274D ;
+      font-weight : 700;
+      color : #15274D;
     }
   }
 }
 
 .settings {
-  background-color : #EFEFEF ;
-  float : right ;
-  width : calc(100% - 192px) ;
-  margin-top : 50px ;
-  min-height : 100% ;
+  background-color : #EFEFEF;
+  float : right;
+  width : calc(100% - 192px);
+  margin-top : 50px;
+  min-height : 100%;
   &__contents {
-    margin : 24px 32px 0 24px ;
+    margin : 24px 32px 0 24px;
     &__main {
-      margin : 0 auto ;
-      width : 844px ;
+      margin : 0 auto;
+      width : 844px;
     }
   }
 }
 
 .name-registration {
-  background-color : white ;
-  vertical-align : middle ;
-  height : 104px ;
-  width : 100vw ;
-  display : table-cell ;
+  background-color : white;
+  vertical-align : middle;
+  height : 104px;
+  width : 100vw;
+  display : table-cell;
   &__left {
-    width : 556px ;
-    vertical-align : middle ;
-    display : inline-block ;
-    padding-left : 72px ;
+    width : 556px;
+    vertical-align : middle;
+    display : inline-block;
+    padding-left : 72px;
     p {
-      font-size : 14px ;
+      font-size : 14px;
     }
   }
   &__right {
-    display : inline-block ;
-    border : 1px solid #54AB23 ;
-    color : #54AB23 ;
-    width : 136px ;
-    height : 40px ;
-    text-align : center ;
-    cursor : pointer ;
-    line-height : 40px ;
+    display : inline-block;
+    border : 1px solid #54AB23;
+    color : #54AB23;
+    width : 136px;
+    height : 40px;
+    text-align : center;
+    cursor : pointer;
+    line-height : 40px;
   }
 }
 
 .setting-container {
-  width : 844px ;
-  margin-top : 10px ;
-  margin-bottom : 48px ;
-  background-color : white ;
-  padding : 72px ;
+  width : 844px;
+  margin-top : 10px;
+  margin-bottom : 48px;
+  background-color : white;
+  padding : 72px;
   h1 {
-    padding : 0 0 24px ;
-    font-weight : 400 ;
-    font-size : 20px ;
+    padding : 0 0 24px;
+    font-weight : 400;
+    font-size : 20px;
   }
   hr {
-    margin-top : 20px ;
-    margin-bottom : 20px ;
-    border : 0 ;
-    border-top : 1px solid #eee ;
+    margin-top : 20px;
+    margin-bottom : 20px;
+    border : 0;
+    border-top : 1px solid #eee;
   }
 }
 .setting-form {
-  padding-top : 24px ;
-  border-top : 1px solid #d9d9d9 ;
+  padding-top : 24px;
+  border-top : 1px solid #d9d9d9;
 }
 
 .form-field {
-  margin-bottom : 32px ;
+  margin-bottom : 32px;
   .short {
-    width : 226px ;
-    border : none ;
+    width : 226px;
+    border : none;
   }
   .top {
-    vertical-align : top ;
-    margin-top : 8px ;
+    vertical-align : top;
+    margin-top : 8px;
   }
   label {
-    width : 232px ;
-    display : inline-block ;
-    margin-bottom : 5px ;
-    font-size : 16px ;
+    width : 232px;
+    display : inline-block;
+    margin-bottom : 5px;
+    font-size : 16px;
   }
   input {
-    height : 40px ;
-    width : 460px ;
-    color : #222 ;
-    padding : 10px ;
-    border : 1px solid #D9D9D9 ;
-    border-radius : 2px ;
+    height : 40px;
+    width : 460px;
+    color : #222;
+    padding : 10px;
+    border : 1px solid #D9D9D9;
+    border-radius : 2px;
   }
   input[disabled] {
-    border : none ;
+    border : none;
   }
   textarea {
-    height : 156px ;
-    width : 463px ;
-    resize : none ;
-    border : 1px solid #EAEAEA ;
-    padding : 10px ;
-    -moz-border-radius : 2px ;
-    -webkit-border-radius : 2px ;
-    border-radius : 2px ;
+    height : 156px;
+    width : 463px;
+    resize : none;
+    border : 1px solid #EAEAEA;
+    padding : 10px;
+    -moz-border-radius : 2px;
+    -webkit-border-radius : 2px;
+    border-radius : 2px;
   }
   .forget-password {
-    margin-top : 4px ;
-    margin-left : 240px ;
-    font-size : 12px ;
-    text-decoration : underline ;
-    color : #666 ;
+    margin-top : 4px;
+    margin-left : 240px;
+    font-size : 12px;
+    text-decoration : underline;
+    color : #666;
   }
 }
 
 .cover {
-  position : relative ;
-  display : inline-block ;
+  position : relative;
+  display : inline-block;
   img {
-    width : 65px ;
-    min-height : 65px ;
-    vertical-align : middle ;
+    width : 65px;
+    min-height : 65px;
+    vertical-align : middle;
   }
   button {
-    margin-left : 16px ;
-    border : 1px solid #EFEFEF ;
-    background-color : #EFEFEF ;
-    color : #666 ;
-    border-radius : 2px ;
-    transition : all .1s linear ;
-    width : 78px ;
-    height : 38px ;
+    margin-left : 16px;
+    border : 1px solid #EFEFEF;
+    background-color : #EFEFEF;
+    color : #666;
+    border-radius : 2px;
+    transition : all .1s linear;
+    width : 78px;
+    height : 38px;
   }
 }
 
 .setting-buttons {
-  margin : 32px auto 40px ;
+  margin : 32px auto 40px;
   button {
-    width : 144px ;
-    height : 48px ;
-    font-size : 14px ;
-    position : relative ;
-    left : 237px ;
-    border : 1px solid #37509C ;
-    background-color : #FFF ;
-    color : #37509C ;
-    transition : all .1s linear ;
-    -moz-border-radius : 2px ;
-    -webkit-border-radius : 2px ;
-    border-radius : 2px ;
+    width : 144px;
+    height : 48px;
+    font-size : 14px;
+    position : relative;
+    left : 237px;
+    border : 1px solid #37509C;
+    background-color : #FFF;
+    color : #37509C;
+    transition : all .1s linear;
+    -moz-border-radius : 2px;
+    -webkit-border-radius : 2px;
+    border-radius : 2px;
   }
 }
 
 .setting-mute {
   .loading {
-    text-align : center ;
+    text-align : center;
   }
 
   h1 {
-    padding : 0px ;
+    padding : 0px;
   }
 
   .description {
-    padding : 8px 0 24px ;
+    padding : 8px 0 24px;
   }
 }
 
 .hide {
-    display : none!important ;
+    display : none!important;
 }
 
 .unregister {
-  width : 100% ;
-  height : 55px ;
+  width : 100%;
+  height : 55px;
   &__link {
-    cursor : pointer ;
-    font-size : 12px ;
-    text-align : center ;
-    color : #666 ;
-    height : 40px ;
-    width : 348px ;
-    padding : 12px 24px ;
-    border-radius : 2px ;
-    border : 1px solid #ddd ;
-    float : right ;
-    transition : all .15s linear ;
+    cursor : pointer;
+    font-size : 12px;
+    text-align : center;
+    color : #666;
+    height : 40px;
+    width : 348px;
+    padding : 12px 24px;
+    border-radius : 2px;
+    border : 1px solid #ddd;
+    float : right;
+    transition : all .15s linear;
   }
 }
 
 .serial-code-setting {
-  margin-top : 80px ;
+  margin-top : 80px;
   button {
-    border : 1px solid #37509C ;
-    background-color : #FFF ;
-    color : #37509C ;
-    border-radius : 2px ;
-    transition : all .1s linear ;
-    float : right ;
-    padding : 10px 20px ;
-    margin-left : 16px ;
+    border : 1px solid #37509C;
+    background-color : #FFF;
+    color : #37509C;
+    border-radius : 2px;
+    transition : all .1s linear;
+    float : right;
+    padding : 10px 20px;
+    margin-left : 16px;
   }
 }
 
 .setting-social {
   .setting-form {
-    position : relative ;
+    position : relative;
   }
   .social-connect {
-    position : relative ;
-    padding : 24px 0 ;
-    border-bottom : 1px solid #EAEAEA ;
+    position : relative;
+    padding : 24px 0;
+    border-bottom : 1px solid #EAEAEA;
 
     button {
-      position : absolute ;
-      right : 10px ;
-      top : 50% ;
-      margin-top : -20px ;
-      height : 40px ;
-      width : 96px ;
-      border : 1px solid #EAEAEA ;
-      background : #FFF ;
-      color : #999 ;
-      -moz-border-radius : 3px ;
-      -webkit-border-radius : 3px ;
-      border-radius : 3px ;
-      outline : 0 ;
+      position : absolute;
+      right : 10px;
+      top : 50%;
+      margin-top : -20px;
+      height : 40px;
+      width : 96px;
+      border : 1px solid #EAEAEA;
+      background : #FFF;
+      color : #999;
+      -moz-border-radius : 3px;
+      -webkit-border-radius : 3px;
+      border-radius : 3px;
+      outline : 0;
     }
   }
   .bottom-item {
-    margin-top : 80px ;
-    padding : 0 0 24px ;
-    font-weight : 400 ;
-    font-size : 20px ;
+    margin-top : 80px;
+    padding : 0 0 24px;
+    font-weight : 400;
+    font-size : 20px;
   }
   .share-url {
-    position : relative ;
-    padding : 24px 0 8px ;
-    border-bottom : 1px solid #EAEAEA ;
+    position : relative;
+    padding : 24px 0 8px;
+    border-bottom : 1px solid #EAEAEA;
     input {
-      display : inline-block ;
-      width : 40px ;
-      height : 40px ;
-      margin : 0 8px 2px 0 ;
-      vertical-align : middle ;
-      background-size : cover ;
+      display : inline-block;
+      width : 40px;
+      height : 40px;
+      margin : 0 8px 2px 0;
+      vertical-align : middle;
+      background-size : cover;
     }
   }
 }
 
 .subscription-setting {
   a.here {
-    color : #337ab7 ;
+    color : #337ab7;
   }
 }
 
 .link {
-  margin : 12px 0 ;
-  color : #37509C ;
-  font-size : 12px ;
+  margin : 12px 0;
+  color : #37509C;
+  font-size : 12px;
   .add-link {
-    margin-left : auto ;
-    display : table ;
+    margin-left : auto;
+    display : table;
     .add-icon {
-      display : table-cell ;
-      vertical-align : middle ;
-      height : 20px ;
-      width : 20px ;
-      border : 1px solid #37509C ;
-      -moz-border-radius : 50% ;
-      -webkit-border-radius : 50% ;
-      border-radius : 50% ;
-      font-weight : 300 ;
-      text-align : center ;
+      display : table-cell;
+      vertical-align : middle;
+      height : 20px;
+      width : 20px;
+      border : 1px solid #37509C;
+      -moz-border-radius : 50%;
+      -webkit-border-radius : 50%;
+      border-radius : 50%;
+      font-weight : 300;
+      text-align : center;
     }
     .add-text {
-      display : table-cell ;
-      vertical-align : middle ;
-      padding-left : 8px ;
-      font-weight : 600 ;
-      line-height : 1 ;
+      display : table-cell;
+      vertical-align : middle;
+      padding-left : 8px;
+      font-weight : 600;
+      line-height : 1;
     }
   }
   .nothing {
-    font-size : 14px ;
-    font-weight : 600 ;
-    color : #999 ;
-    margin-top : 52px ;
+    font-size : 14px;
+    font-weight : 600;
+    color : #999;
+    margin-top : 52px;
   }
 }
 
 .news-letter {
-  position : relative ;
-  padding : 24px 0 ;
-  border-bottom : 1px solid #EAEAEA ;
+  position : relative;
+  padding : 24px 0;
+  border-bottom : 1px solid #EAEAEA;
   button {
-    position : absolute ;
-    right : 10px ;
-    top : 50% ;
-    margin-top : -20px ;
-    height : 40px ;
-    width : 96px ;
-    border : 1px solid #EAEAEA ;
-    background : #FFF ;
-    color : #999 ;
-    -moz-border-radius : 3px ;
-    -webkit-border-radius : 3px ;
-    border-radius : 3px ;
-    outline : 0 ;
+    position : absolute;
+    right : 10px;
+    top : 50%;
+    margin-top : -20px;
+    height : 40px;
+    width : 96px;
+    border : 1px solid #EAEAEA;
+    background : #FFF;
+    color : #999;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    border-radius : 3px;
+    outline : 0;
   }
   button.enabled {
-    border-color : #15274D ;
-    color : #FFF ;
-    background : #15274D ;
+    border-color : #15274D;
+    color : #FFF;
+    background : #15274D;
   }
 }
 
 button {
-  cursor : pointer ;
+  cursor : pointer;
 }
 
 * {
-  box-sizing : border-box ;
+  box-sizing : border-box;
 }
 
 .cf::after {
-  content : '' ;
-  display : block ;
-  clear : both ;
+  content : '';
+  display : block;
+  clear : both;
 }
 
 img {
-    vertical-align : middle ;
-    outline : 0 ;
+    vertical-align : middle;
+    outline : 0;
 }
 
 .texc {
-  text-align : center ;
+  text-align : center;
 }
 
 .texo {
-  overflow : hidden ;
-  text-overflow : ellipsis ;
+  overflow : hidden;
+  text-overflow : ellipsis;
 }
