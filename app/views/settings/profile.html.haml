@@ -20,7 +20,7 @@
             = label_tag(:cover ,"アイコン")
             .cover
               = image_tag ""
-              %button{type:"button"} 変更する
+              = button_tag "変更する" ,type:"button"
           .form-field
             = label_tag(:user_id ,"ユーザID")
             = text_field(:user ,:id ,class:"short" ,value:"カレントユーザのID" ,disabled:"")
@@ -42,7 +42,7 @@
             = label_tag(:user_profile ,"プロフィール" ,class:"top")
             = text_area(:user ,:profile ,maxlength:"2000" ,value:"カレントユーザのプロフィール")
           .setting-buttons
-            %button.saveBtn{type: "button"} 保存する
+            = button_tag "保存する" ,type:"button" ,class:"saveBtn"
           = hidden_field(:user ,:mail ,value:"カレントユーザのメールアドレス")
           %hr.separator
           .unregister

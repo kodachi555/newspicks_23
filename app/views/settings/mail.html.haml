@@ -18,4 +18,4 @@
             = label_tag(:mail_confirm ,"確認")
             = text_field(:mail ,:confirm)
         .setting-buttons
-          %button.saveBtn{type: "button"} 保存する
+          = button_tag "保存する" ,type:"button" ,class:"saveBtn"
