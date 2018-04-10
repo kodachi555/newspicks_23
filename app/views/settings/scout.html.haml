@@ -1,0 +1,12 @@
+= render partial: "news/main-header"
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+      .setting-container
+        %h1 求人応募情報の削除
+        .setting-form
+          応募した履歴を全て削除します。過去の応募履歴と及び登録した個人情報が全て削除されます。
+        .setting-buttons
+          = button_tag "削除する", type:"button", disabled:"", class:"saveBtn"
