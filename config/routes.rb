@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  get 'news' => 'news#index'
   root 'news#index'
-  resources :news
+  resources :news do
+    collection do
+      get 'search'
+    end
+  end
+  resources :settings, only: [] do
+    collection do
+      get :profile, :mail, :password, :subscriptions, :mute, :social, :query, :newsletters, :scout
+    end
+  end
 end

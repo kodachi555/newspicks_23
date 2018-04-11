@@ -1,0 +1,153 @@
+.search-result-page{
+  float: right;
+  margin-top: 50px;
+  height: 100%;
+  width: calc(100% - 192px) ;
+  background-color: #EFEFEF;
+  color: black;
+  &-header{
+    padding: 10px 0 30px 130px;
+  }
+  &-header div{
+    float: left;
+    margin-right: 50px;
+    padding-bottom: 5px;
+    border: 0px;
+  }
+  &-header div a{
+    text-decoration : none;
+    color: gray;
+  }
+  &-header div a:hover{
+    color: black;
+    border-bottom: solid 1px black;
+  }
+  &-search-tool-bar{
+    background-color: #f5f5f5;
+    clear: both;
+    padding: 10px 0 30px 100px;
+    border-bottom: solid 1px gray;
+  }
+  &-search-tool-bar div{
+    float: left;
+    font-size:12px;
+    margin-right: 50px;
+  }
+  &-leftcontent{
+    clear: both;
+    background-color: #EFEFEF;
+    width: 70%;
+    height: 100%;
+    float: left;
+    &-news{
+      background-color: #EFEFEF;
+      margin: 20px 10px 0 60px;
+      &-topnews{
+        background-color: white;
+        font-size: 15px;
+        padding: 10px 0 10px 10px;
+        border-bottom: solid 2px #f5f5f5;
+      }
+      &-content{
+        height: 140px;
+        margin-bottom: 20px;
+        background-color: white;
+      &-img{
+        margin: 12px 0 0 15px;
+        float: left;
+      }
+      &-img img{
+        width: 100px;
+        height: 100px;
+      }
+      &-title{
+        width: calc(100% - 150px) ;
+        height: 30px;
+        font-size: 18px;
+        padding-top: 12px;
+        overflow: hidden;
+      }
+      &-title a{
+        text-decoration: none;
+        color: blue;
+        margin-left: 20px;
+      }
+      &-tag{
+        color: gray;
+        font-size: 10px;
+        margin-left: 135px;
+      }
+      &-text{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-left: 135px;
+        width: calc(100% - 150px) ;
+        height: 40px;
+        overflow: hidden;
+      }
+    }
+    }
+  }
+  &-rightcontent{
+    background-color: #EFEFEF;
+    height: 100%;
+    width: 30%;
+    float: left;
+    &-keywordcomment{
+      color: black;
+      font-size: 15px;
+      margin-top: 50px;
+      margin-left: 8px;
+      margin-bottom: 5px;
+    }
+    &-comment{
+      border: solid 1px #dcdcdc;
+      border-radius: 5px;
+      margin: 0 10px 10px 10px;
+      padding-bottom: 10px;
+    &-img{
+      margin: 10px 10px 0px 10px;
+      float: left;
+    }
+    &-img img{
+      width: 40px;
+      height: 40px;
+    }
+    &-username{
+      margin-top: 10px;
+      color: black;
+    }
+    &-userdata{
+      color: gray;
+      font-size: 8px;
+    }
+    &-usercomment{
+      clear: both;
+      color: black;
+      margin-left: 10px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      width: calc(100% - 20px) ;
+      height: 50px;
+      overflow: hidden;
+    }
+    &-news{
+      color: black;
+      font-size: 12px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+      width: calc(100% - 20px) ;
+      overflow: hidden;
+      height: 20px;
+    }
+    &-newstag{
+      color: gray;
+      font-size: 10px;
+      margin-left: 10px;
+    }
+    }
+    &-comment a{
+      text-decoration: none;
+    }
+  }
+}

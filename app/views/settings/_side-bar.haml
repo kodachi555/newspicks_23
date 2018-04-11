@@ -1,0 +1,24 @@
+/ 左サイドバー始まり
+.pick-stream.fixed-left
+  .stream-container
+    .user-profile-tile
+      %a{"data-user" => "#", :href => "#"}
+        .user-header
+          .user-icon
+            = image_tag "https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000"
+          .user-info
+            .user-name 苗字 名前
+            .user-title 会社名 役職
+    .menu-items
+      %span.menu-header アカウント
+      = link_to "ユーザ情報", profile_settings_path, class: "menu-item"
+      = link_to "メールアドレス設定", mail_settings_path, class: "menu-item"
+      = link_to "パスワード設定", password_settings_path, class: "menu-item"
+      %span.menu-header 有料サービス
+      = link_to "登録中のプラン", subscriptions_settings_path, class: "menu-item"
+      %span.menu-header 機能設定
+      = link_to "非表示コメント", mute_settings_path, class: "menu-item"
+      = link_to "外部サービス設定", social_settings_path, class: "menu-item"
+      = link_to "キーワード設定", query_settings_path, class: "menu-item"
+      = link_to "メールマガジン購読設定", newsletters_settings_path, class: "menu-item"
+      = link_to "求人応募情報", scout_settings_path, class: "menu-item"

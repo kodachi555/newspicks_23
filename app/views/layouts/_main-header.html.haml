@@ -3,12 +3,13 @@
     .menu
       = image_tag "humberger.de26402b.png"
     .search-bar
-      = form_tag('/products/search', method: :get) do
+      = form_tag('/news/search', method: :get) do
         = image_tag "ic_search.a18e89c7.png"
         %input.search__query{name: "keyword", placeholder: "検索する", type: "text", value: ""}
   .center-area
     .newspicks-logo
-      = image_tag "logo_type.086ed6f5.png"
+      = link_to root_path do
+        = image_tag "logo_type.086ed6f5.png"
   .right-area
     .user-bar
       .user-bar__left
@@ -19,6 +20,8 @@
         .right-bottom
           学生会員
     .notification-bar
-      = image_tag "flag.b91825e7.png"
+      = link_to "" do
+        = image_tag "flag.b91825e7.png"
     .item-pick
-      = image_tag "pen.181d3e93.png"
+      = link_to "" do
+        = image_tag "pen.181d3e93.png"

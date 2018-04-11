@@ -1,2 +1,188 @@
+<<<<<<< HEAD
 = render 'main-header'
 = render 'user-picks'
+=======
+//= render 'main-header'
+= render 'side-bar'
+/ = render 'search-result-top'
+/ = render 'search-result-user'
+/ = render 'search-result-comment'
+/ = render 'search-result-company'
+/ = render 'top-main-content'
+.top-main-content
+  = render 'news/top-main-content-template/main-content-header'
+  .main
+    .main-content
+      .latest-news
+        .text-area
+          .area-title
+            新着ニュース
+          %ul.news-list
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+            = render "news/top-main-content-template/latest-news-block"
+      %ul.main-content-news
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+        = render "news/top-main-content-template/main-content-news-block"
+    .banner-advartisement{ style: "background-image: url('https://resources.newspicks.com/banner/pc_make_money_after.png')"}
+    .origin-news-content
+      .origin-news-content__top
+        .origin-news-content__top__left
+          Newspicksオリジナル
+        .origin-news-content__top__right
+          = link_to "NewsPicks オリジナル記事一覧を見る", ""
+      %ul.origin-news-content__list
+        = render 'news/top-main-content-template/origin-content-block'
+        = render 'news/top-main-content-template/origin-content-block'
+        = render 'news/top-main-content-template/origin-content-block'
+    .banner-advartisement{ style: "background-image: url('https://resources.newspicks.com/banner/pc_make_money_after.png')"}
+    .futured-content
+      .futured-content__top
+        .futured-content__top__left
+          特集:ニューエリート
+        .futured-content__top__right
+          = link_to "特集:ニューエリート 一覧をみる", ""
+
+      %ul.futured-content__list
+        = render 'news/top-main-content-template/futured-content-block'
+        = render 'news/top-main-content-template/futured-content-block'
+        = render 'news/top-main-content-template/futured-content-block'
+    .inovation-content
+      = render 'news/top-main-content-template/inovation-content'
+    .tech-content
+      .tech-content__top
+        .tech-content__top__left
+          テクノロジー
+        .tech-content__top__right
+          = link_to "テクノロジー 一覧を見る"
+      %ul.tech-content__list
+        = render 'news/top-main-content-template/tech-content-block'
+        = render 'news/top-main-content-template/tech-content-block'
+        = render 'news/top-main-content-template/tech-content-block'
+    .biz-content
+      .biz-content__top
+        .biz-content__top__left
+          ビジネス
+        .biz-content__top__right
+          = link_to "ビジネス 一覧を見る"
+      %ul.biz-content__list
+        = render 'news/top-main-content-template/biz-content-block'
+        = render 'news/top-main-content-template/biz-content-block'
+        = render 'news/top-main-content-template/biz-content-block'
+    .pol-eco-content
+      .pol-eco-content__top
+        .pol-eco-content__top__left
+          政治・経済
+        .pol-eco-content__top__right
+          = link_to "政治・経済 一覧を見る"
+      %ul.pol-eco-content__list
+        = render 'news/top-main-content-template/pol-eco-content-block'
+        = render 'news/top-main-content-template/pol-eco-content-block'
+        = render 'news/top-main-content-template/pol-eco-content-block'
+    .fin-content
+      .fin-content__top
+        .fin-content__top__left
+          金融・マーケット
+        .fin-content__top__right
+          = link_to "金融・マーケット 一覧を見る"
+      %ul.fin-content__list
+        = render 'news/top-main-content-template/fin-content-block'
+        = render 'news/top-main-content-template/fin-content-block'
+        = render 'news/top-main-content-template/fin-content-block'
+    .carrior-content
+      .carrior-content__top
+        .carrior-content__top__left
+          キャリア・教育
+        .carrior-content__top__right
+          = link_to "キャリア・教育 一覧を見る"
+      %ul.carrior-content__list
+        = render 'news/top-main-content-template/carrior-content-block'
+        = render 'news/top-main-content-template/carrior-content-block'
+        = render 'news/top-main-content-template/carrior-content-block'
+    .sports-content
+      .sports-content__top
+        .sports-content__top__left
+          社会・スポーツ
+        .sports-content__top__right
+          = link_to "社会・スポーツ 一覧を見る"
+      %ul.sports-content__list
+        = render 'news/top-main-content-template/sports-content-block'
+        = render 'news/top-main-content-template/sports-content-block'
+        = render 'news/top-main-content-template/sports-content-block'
+    .joboff-content
+      .joboff-content__top
+        .joboff-content__top__left
+          ジョブオファー
+        .joboff-content__top__right
+          = link_to "ジョブオファー 一覧を見る"
+      %ul.joboff-content__list
+        = render 'news/top-main-content-template/joboff-content-block'
+        = render 'news/top-main-content-template/joboff-content-block'
+        = render 'news/top-main-content-template/joboff-content-block'
+    .popu-news-content
+      .popu-news-content__top
+        過去の人気特集
+      %ul.popu-news-content__list
+        = render 'news/top-main-content-template/popu-news-content-block'
+        = render 'news/top-main-content-template/popu-news-content-block'
+        = render 'news/top-main-content-template/popu-news-content-block'
+    .anacomment-content
+      .anacomment-content__top
+        アナリシス
+      %ul.anacomment-content__list
+        = render 'news/top-main-content-template/anacomment-content-block'
+        = render 'news/top-main-content-template/anacomment-content-block'
+        = render 'news/top-main-content-template/anacomment-content-block'
+    .user-rank-content
+      .user-rank-content__top
+        .user-rank-content__top__left
+          ユーザーランキング
+        .user-rank-content__top__right
+          = link_to "コメントランキング 一覧を見る"
+      %ul.user-rank-content__list
+        = render 'news/top-main-content-template/user-rank-content-block'
+        = render 'news/top-main-content-template/user-rank-content-block'
+        = render 'news/top-main-content-template/user-rank-content-block'
+        = render 'news/top-main-content-template/user-rank-content-block'
+    .comment-rank-content
+      .comment-rank-content__top
+        .comment-rank-content__top__left
+          コメントランキング
+        .comment-rank-content__top__right
+          = link_to "コメントランキング 一覧を見る"
+      %ul.comment-rank-content__list
+        = render 'news/top-main-content-template/comment-rank-content-block'
+        = render 'news/top-main-content-template/comment-rank-content-block'
+        = render 'news/top-main-content-template/comment-rank-content-block'
+        = render 'news/top-main-content-template/comment-rank-content-block'
+  .footer
+    .footer-block
+      .footer-block__links
+        = link_to "NewsPicks について", ""
+        = link_to "利用規約"
+        = link_to "コンテンツの利用について"
+        = link_to "個人情報保護方針"
+        = link_to "広告掲載"
+      .footer-block__social-icon
+        = link_to "" do
+          = image_tag "twitter.f04be6e0.png";
+        = link_to "" do
+          = image_tag "facebook.89083ca0.png";
+      .footer-block__social-action
+      .footer-block__store
+        = link_to "" do
+          = image_tag "google_play.825eece9.png";
+        = link_to "" do
+          = image_tag "app_store.a047c749.png";
+>>>>>>> master
