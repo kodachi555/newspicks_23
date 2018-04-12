@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'news#index'
   resources :news do
     collection do
-      get 'search'
+      get :search, :userpicks
     end
   end
   resources :settings, only: [] do
