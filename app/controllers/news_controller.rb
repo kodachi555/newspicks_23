@@ -8,6 +8,4 @@ class NewsController < ApplicationController
   def search
   end
 
-  def userpicks
-  end
 end
