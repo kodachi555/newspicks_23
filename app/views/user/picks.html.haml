@@ -29,11 +29,7 @@
             %input.search{:placeholder => "自分のPickを検索", :type => "search", :value => ""}/
   .main
     %ul.main__list
-      = render 'news/top-main-content-template/pol-eco-content-block'
-      = render 'news/top-main-content-template/pol-eco-content-block'
-      = render 'news/top-main-content-template/pol-eco-content-block'
-      = render 'news/top-main-content-template/pol-eco-content-block'
-      = render 'news/top-main-content-template/pol-eco-content-block'
-      = render 'news/top-main-content-template/pol-eco-content-block'
+      - 15.times do
+        = render 'news/top-main-content-template/pol-eco-content-block'
 
 
