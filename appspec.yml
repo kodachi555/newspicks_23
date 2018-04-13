@@ -6,7 +6,7 @@ files:
 permissions:
    - object: /var/www/
      pattern: "**"
-     mode: 775
+     mode: 777
 hooks:
   ApplicationStop:
     - location: scripts/stop_server.sh
