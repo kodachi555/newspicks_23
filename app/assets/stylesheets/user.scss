@@ -52,6 +52,7 @@
       text-align: center;
       color: #15274D;
       font-weight: 700;
+      color: #222;
       .picks {
       height: 19.047px;
       width: 48px;
@@ -66,7 +67,6 @@
         padding: 8px 24px;
         float:left;
         font-family: Helvetica,Arial,sans-serif;
-        color: #222;
         .count {
           width: 48px;
           height: 28px;
@@ -142,7 +142,7 @@
   }
 
   .main {
-    padding-top: 40px;
+    padding-top: 25px;
     background: #EFEFEF;
     height: 100%;
     background-size:cover;
@@ -152,9 +152,85 @@
       margin: 0 auto;
       box-sizing: border-box;
       max-width: 1200px;
-      padding: 0 50px 0 80px;
+      padding: 0 60px 0 60px;
     }
   }
 }
 
-
+.usertitle{
+  width: 344px;
+  height: 131px;
+  background-color: white;
+  margin: 0 15px 15px 0;
+  float: left;
+  .follow__tag {
+    width: 312px;
+    height: 99px;
+    padding: 16px;
+    position: relative;
+    .usercover {
+      width: 42px;
+      height: 42px;
+      float: left;
+      background-color: black;
+    }
+    .profile-container {
+      width: 260px;
+      height: 48px;
+      margin-left: 52px;
+      .name-wrapper {
+        width: 260px;
+        height: 20px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .title {
+        width: 260px;
+        height: 12px;
+        margin-top: 2px;
+        line-height: 100%;
+        min-height: 12px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    .counts {
+      width: 312px;
+      height: 40px;
+      margin-top: 16px;
+      .reration {
+        width: 50px;
+        height: 40px;
+        padding: 0 10px;
+        text-align: center;
+        display: inline-block;
+        .t {
+          color: #999;
+          font-size: 8px;
+        }
+        .v {
+          color: #15274D;
+          font-size: 12px;
+        }
+      }
+      .vr {
+        width: 1px;
+        height: 25px;
+        display: inline-block;
+        background: #D9D9D9;
+      }
+    }
+    .follow-btn {
+      width: 75px;
+      height: 27.531px;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      cursor: pointer;
+      .following {
+        width: 75px;
+        height: 27.531px;
+      }
+    }
+  }
+}
