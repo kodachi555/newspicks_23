@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   resources :user do
     collection do
-      get :picks
+      get :picks, :follow
     end
   end
 end
