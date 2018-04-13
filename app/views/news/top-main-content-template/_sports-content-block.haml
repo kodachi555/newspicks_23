@@ -1,11 +1,11 @@
 %li.sports-content__list__block
   //トップ画面 社会・スポーツブロック
   .image-area
-    = link_to "/news/1" do
-      %img{style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
+    = link_to "/news/#{news.id}" do
+      %img{style: "background-image: url('#{news.image_url}')"}
   .text-area
     .news-title
-      ウォーレンバフェッ遠おおおお！！
+      = news.title
     .picker-space
       .picker-space__top
         .picker-space__top__left
@@ -16,14 +16,13 @@
             第一生命経済研究所　経済学部
       .picker-space__bottom
         .comment
-          コーラやっぱり欲しい
-          コーラうん
+          コーラやる
+          コーラやる
     / %ul.picker-list
     /   %li.picker-list__avatar
     /   %li.picker-list__avatar
     .meta
       .news-site
-        コカコーラ
+        = news.site_name
       .pick-time
         22年前
-

@@ -1,11 +1,11 @@
 %li.origin-news-content__list__block
   //トップ画面 オリジナルコンテンツブロック
   .image-area
-    = link_to "/news/1" do
-      %img{style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
+    = link_to "/news/#{news.id}" do
+      = image_tag news.image_url
   .text-area
     .news-title
-      ウォーレンバフェット！！
+      = news.title
     .picker-space
       .picker-space__top
         .picker-space__top__left
@@ -23,7 +23,7 @@
     /   %li.picker-list__avatar
     .meta
       .news-site
-        コカコーラ
+        = news.site_name
       .pick-time
         22年前
 
