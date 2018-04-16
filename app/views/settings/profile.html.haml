@@ -1,0 +1,49 @@
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+      .name-registration
+        .name-registration__left
+          %p.main
+            実名登録が完了していません
+          %p.sub
+            登録すると自分のコメントをフォロワー以外にも公開できます。
+        .name-registration__right
+          実名を登録する
+      .setting-container
+        %h1 アカウント設定
+        .setting-form
+          .error-message
+          .form-field
+            = label_tag(:cover, "アイコン")
+            .cover
+              = image_tag ""
+              = button_tag "変更する", type:"button"
+          .form-field
+            = label_tag(:user_id, "ユーザID")
+            = text_field(:user, :id, class:"short", value:"カレントユーザのID", disabled:"")
+          .form-field
+            = label_tag(:user_support, "サポートID")
+            = text_field(:user, :support, class:"short", value:"カレントユーザのサポートID", disabled:"")
+            %div
+              %p ※ サポートデスクへのお問合せ時は、こちらをお伝え頂くとスムーズにご案内できます。
+          .form-field
+            = label_tag(:user_name, "名前")
+            = text_field(:user, :name, value:"カレントユーザの名前")
+          .form-field
+            = label_tag(:user_company, "会社名")
+            = text_field(:user, :company, value:"カレントユーザの会社名")
+          .form-field
+            = label_tag(:user_title, "役職")
+            = text_field(:user, :title, value:"カレントユーザの役職")
+          .form-field
+            = label_tag(:user_profile, "プロフィール", class:"top")
+            = text_area(:user, :profile, maxlength:"2000", value:"カレントユーザのプロフィール")
+          .setting-buttons
+            = button_tag "保存する", type:"button", class:"saveBtn"
+          = hidden_field(:user, :mail, value:"カレントユーザのメールアドレス")
+          %hr.separator
+          .unregister
+            .unregister__link
+              NewsPicksのアカウントを完全に削除する

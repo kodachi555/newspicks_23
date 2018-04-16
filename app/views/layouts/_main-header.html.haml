@@ -3,7 +3,7 @@
     .menu
       = image_tag "humberger.de26402b.png"
     .search-bar
-      = form_tag('/products/search', method: :get) do
+      = form_tag('/news/search', method: :get) do
         = image_tag "ic_search.a18e89c7.png"
         %input.search__query{name: "keyword", placeholder: "検索する", type: "text", value: ""}
   .center-area

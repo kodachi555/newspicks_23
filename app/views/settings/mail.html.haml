@@ -1,0 +1,20 @@
+= render partial: "side-bar.haml"
+
+.settings.cf
+  .settings__contents
+    .settings__contents__main
+      .setting-container
+        %h1 メールアドレス設定
+        .setting-form
+          .form-field
+            = label_tag(:mail_current, "現在のメールアドレス")
+            = text_field(:mail, :current)
+          .error-message-new{style:"display: none;"}
+          .form-field
+            = label_tag(:mail_new, "新しいメールアドレス")
+            = text_field(:mail, :new)
+          .form-field
+            = label_tag(:mail_confirm, "確認")
+            = text_field(:mail, :confirm)
+        .setting-buttons
+          = button_tag "保存する", type:"button", class:"saveBtn"
