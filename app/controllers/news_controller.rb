@@ -14,6 +14,8 @@ class NewsController < ApplicationController
     @fin_news = News.where("category_id = '6'").order("id DESC").limit(3)
     @carrior_news = News.where("category_id = '7'").order("id DESC").limit(3)
     @sports_news = News.where("category_id = '8'").order("id DESC").limit(3)
+    @joboff_news = News.where("category_id = '10'").order("id DESC").limit(3)
+    @ana_news = News.where("category_id = '11'").order("id DESC").limit(3)
   end
 
   def search
