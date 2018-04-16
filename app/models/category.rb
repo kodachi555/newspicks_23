@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :news
+  has_many :products
 end
