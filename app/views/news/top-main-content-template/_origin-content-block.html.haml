@@ -2,7 +2,7 @@
   //トップ画面 オリジナルコンテンツブロック
   .image-area
     = link_to "/news/#{news.id}" do
-      = image_tag news.image_url
+      %img{style: "background-image: url('#{news.image_url}')"}
   .text-area
     .news-title
       = news.title
