@@ -1,29 +1,30 @@
-%li.main-content-news__block
-  //トップ画面 メインコンテンツブロック
-  .image-area
-    = link_to "" do
-      %img{style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
-  .text-area
-    .news-title
-      ウォーレンバフェット！！
-    .picker-space
-      .picker-space__top
-        .picker-space__top__left
-        .picker-space__top__right
-          .top
-            山田太郎
-          .bottom
-            第一生命経済研究所　経済学部
-      .picker-space__bottom
-        .comment
-          コーラやる
-          コーラやる
-    / %ul.picker-list
-    /   %li.picker-list__avatar
-    /   %li.picker-list__avatar
-    .meta
-      .news-site
-        コカコーラ
-      .pick-time
-        22年前
+- @products.first(7).each do |product|
+  %li.main-content-news__block
+    //トップ画面 メインコンテンツブロック
+    .image-area
+      = link_to "/products/#{product.id}",method: :get do
+        %img{style: "background-image: url(#{product.image_url})"}
+    .text-area
+      .news-title
+        = product.title
+      .picker-space
+        .picker-space__top
+          .picker-space__top__left
+          .picker-space__top__right
+            .top
+              山田太郎
+            .bottom
+              第一生命経済研究所　経済学部
+        .picker-space__bottom
+          .comment
+            コーラやる
+            コーラやる
+      / %ul.picker-list
+      /   %li.picker-list__avatar
+      /   %li.picker-list__avatar
+      .meta
+        .news-site
+          コカコーラ
+        .pick-time
+          22年前
 
