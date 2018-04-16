@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'news#index'
+  devise_for :users
+  resources :products
   resources :news do
     collection do
       get :search
