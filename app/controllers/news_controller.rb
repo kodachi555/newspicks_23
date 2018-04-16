@@ -1,8 +1,10 @@
 class NewsController < ApplicationController
-  def show
-  end
-  
   def index
+    @products = Product.all
+  end
+
+  def show
+    @product = Products.find(params[:id])
   end
 
   def search
