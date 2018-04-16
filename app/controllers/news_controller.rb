@@ -20,5 +20,6 @@ class NewsController < ApplicationController
   end
 
   def search
+    @product = Product.where('title LIKE(?)', "%#{params[:keyword]}%")
   end
 end
