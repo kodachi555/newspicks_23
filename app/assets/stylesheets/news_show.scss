@@ -30,10 +30,16 @@ hr {
       height: 262px;
       width: 100%;
       position: relative;
-      background-image: image-url("2931177.jpeg");
+      // background-image: image-url("2931177.jpeg");
       background-position: center;
       background-size: cover;
       z-index: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+      }
       &__pick {
         width: 81px;
         height: 31px;

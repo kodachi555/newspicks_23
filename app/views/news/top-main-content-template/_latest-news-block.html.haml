@@ -1,9 +1,10 @@
-%li.news-block
-  // トップ画面 右側 新着ニュースの部分
-  .news-block__top
-    ウォーレンバフェット、！！！
-  .news-block__bottom
-    .news-text
-    .published-time
-      30年前
+= link_to("/news/#{news.id}") do
+  %li.news-block
+    // トップ画面 右側 新着ニュースの部分
+    .news-block__top
+      = news.title
+    .news-block__bottom
+      .news-text
+      .published-time
+        3時間前
 

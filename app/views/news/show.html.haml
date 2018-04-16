@@ -4,6 +4,7 @@
   .news_detail
     .contents__area
       .news__image
+        = image_tag "#{@news.image_url}"
         .news_detail__pick
           .news_detail__pick--cover
           .label
@@ -11,17 +12,20 @@
             %span.small Picks
       .news
         .news_text
-          %h1.title 米ウェイモ：ホンダとの提携合意に近づく、配送用自動運転車開発で
+          %h1.title
+            = @news.title
+          / %h1.title #米ウェイモ：ホンダとの提携合意に近づく、配送用自動運転車開発で
         .meta
           .meta__block
             .icon_image
               = image_tag "publisher.a6ed8ad6.png"
-              .caption Bloomberg
+              .caption
+                = @news.site_name
           .meta__block
             .icon_image
               = image_tag "time.png"
               .caption 2時間
-        = link_to '続きを読む', '#' , class: 'read-more'
+        = link_to '続きを読む', "#{@news.page_url}" , class: 'read-more'
     .news_comment
       .news_comment-wrap
         .commentarea

@@ -14,17 +14,11 @@
           .area-title
             新着ニュース
           %ul.news-list
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
-            = render "news/top-main-content-template/latest-news-block"
+            - @latest_news.each do |news|
+              = render "news/top-main-content-template/latest-news-block", news: news
       %ul.main-content-news
-        = render "news/top-main-content-template/main-content-news-block"
+        - @main_news.each do |news|
+          = render "news/top-main-content-template/main-content-news-block", news: news
     .banner-advartisement{ style: "background-image: url('https://resources.newspicks.com/banner/pc_make_money_after.png')"}
     .origin-news-content
       .origin-news-content__top
@@ -33,9 +27,8 @@
         .origin-news-content__top__right
           = link_to "NewsPicks オリジナル記事一覧を見る", ""
       %ul.origin-news-content__list
-        = render 'news/top-main-content-template/origin-content-block'
-        = render 'news/top-main-content-template/origin-content-block'
-        = render 'news/top-main-content-template/origin-content-block'
+        - @origin_news.each do |news|
+          = render 'news/top-main-content-template/origin-content-block', news: news
     .banner-advartisement{ style: "background-image: url('https://resources.newspicks.com/banner/pc_make_money_after.png')"}
     .futured-content
       .futured-content__top
@@ -45,9 +38,8 @@
           = link_to "特集:ニューエリート 一覧をみる", ""
 
       %ul.futured-content__list
-        = render 'news/top-main-content-template/futured-content-block'
-        = render 'news/top-main-content-template/futured-content-block'
-        = render 'news/top-main-content-template/futured-content-block'
+        - @futured_news.each do |news|
+          = render 'news/top-main-content-template/futured-content-block', news: news
     .inovation-content
       = render 'news/top-main-content-template/inovation-content'
     .tech-content
@@ -57,9 +49,8 @@
         .tech-content__top__right
           = link_to "テクノロジー 一覧を見る"
       %ul.tech-content__list
-        = render 'news/top-main-content-template/tech-content-block'
-        = render 'news/top-main-content-template/tech-content-block'
-        = render 'news/top-main-content-template/tech-content-block'
+        - @tech_news.each do |news|
+          = render 'news/top-main-content-template/tech-content-block', news: news
     .biz-content
       .biz-content__top
         .biz-content__top__left
@@ -67,9 +58,8 @@
         .biz-content__top__right
           = link_to "ビジネス 一覧を見る"
       %ul.biz-content__list
-        = render 'news/top-main-content-template/biz-content-block'
-        = render 'news/top-main-content-template/biz-content-block'
-        = render 'news/top-main-content-template/biz-content-block'
+        - @biz_news.each do |news|
+          = render 'news/top-main-content-template/biz-content-block', news: news
     .pol-eco-content
       .pol-eco-content__top
         .pol-eco-content__top__left
@@ -77,9 +67,8 @@
         .pol-eco-content__top__right
           = link_to "政治・経済 一覧を見る"
       %ul.pol-eco-content__list
-        = render 'news/top-main-content-template/pol-eco-content-block'
-        = render 'news/top-main-content-template/pol-eco-content-block'
-        = render 'news/top-main-content-template/pol-eco-content-block'
+        - @pol_news.each do |news|
+          = render 'news/top-main-content-template/pol-eco-content-block', news: news
     .fin-content
       .fin-content__top
         .fin-content__top__left
@@ -87,9 +76,8 @@
         .fin-content__top__right
           = link_to "金融・マーケット 一覧を見る"
       %ul.fin-content__list
-        = render 'news/top-main-content-template/fin-content-block'
-        = render 'news/top-main-content-template/fin-content-block'
-        = render 'news/top-main-content-template/fin-content-block'
+        - @fin_news.each do |news|
+          = render 'news/top-main-content-template/fin-content-block', news: news
     .carrior-content
       .carrior-content__top
         .carrior-content__top__left
@@ -97,9 +85,8 @@
         .carrior-content__top__right
           = link_to "キャリア・教育 一覧を見る"
       %ul.carrior-content__list
-        = render 'news/top-main-content-template/carrior-content-block'
-        = render 'news/top-main-content-template/carrior-content-block'
-        = render 'news/top-main-content-template/carrior-content-block'
+        - @carrior_news.each do |news|
+          = render 'news/top-main-content-template/carrior-content-block', news: news
     .sports-content
       .sports-content__top
         .sports-content__top__left
@@ -107,9 +94,8 @@
         .sports-content__top__right
           = link_to "社会・スポーツ 一覧を見る"
       %ul.sports-content__list
-        = render 'news/top-main-content-template/sports-content-block'
-        = render 'news/top-main-content-template/sports-content-block'
-        = render 'news/top-main-content-template/sports-content-block'
+        - @sports_news.each do |news|
+          = render 'news/top-main-content-template/sports-content-block', news: news
     .joboff-content
       .joboff-content__top
         .joboff-content__top__left
@@ -117,9 +103,8 @@
         .joboff-content__top__right
           = link_to "ジョブオファー 一覧を見る"
       %ul.joboff-content__list
-        = render 'news/top-main-content-template/joboff-content-block'
-        = render 'news/top-main-content-template/joboff-content-block'
-        = render 'news/top-main-content-template/joboff-content-block'
+        - @joboff_news.each do |news|
+          = render 'news/top-main-content-template/joboff-content-block', news: news
     .popu-news-content
       .popu-news-content__top
         過去の人気特集
@@ -131,9 +116,8 @@
       .anacomment-content__top
         アナリシス
       %ul.anacomment-content__list
-        = render 'news/top-main-content-template/anacomment-content-block'
-        = render 'news/top-main-content-template/anacomment-content-block'
-        = render 'news/top-main-content-template/anacomment-content-block'
+        - @ana_news.each do |news|
+          = render 'news/top-main-content-template/anacomment-content-block', news: news
     .user-rank-content
       .user-rank-content__top
         .user-rank-content__top__left
