@@ -5,8 +5,7 @@ class Afpscraping
     title = page.at('.article-signage .title').inner_text
     image_url = page.at('.photo-wrapper img')[:src] if page.at('.photo-wrapper img')
     page_url = link
-
-    news = News.where(title: title).first_or_initialize
+    news = Product.where(title: title).first_or_initialize
     news.title = title
     news.image_url = image_url
     news.page_url = page_url

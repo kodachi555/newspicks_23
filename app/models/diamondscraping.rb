@@ -5,7 +5,7 @@ class Diamondscraping
     title = page.at('.article-title').inner_text
     image_url = page.at('.figure-center img')[:src] if page.at('.figure-center img')
     page_url = link
-    news = News.where(title: title).first_or_initialize
+    news = Product.where(title: title).first_or_initialize
     news.title = title
     news.image_url = image_url
     news.page_url = page_url

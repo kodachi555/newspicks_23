@@ -6,7 +6,7 @@ class Itmediascraping
     title = page.at('.inner h1 big').inner_text
     image_url = page.at("#col600 a img")[0][:src] if page.at(".col600 a img")
     page_url = link
-    news = News.where(title: title).first_or_initialize
+    news = Product.where(title: title).first_or_initialize
     news.title = title
     news.image_url = image_url
     news.page_url = page_url

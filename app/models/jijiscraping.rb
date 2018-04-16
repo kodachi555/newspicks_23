@@ -5,7 +5,7 @@ class Jijiscraping
     title = page.at('.ArticleTitle h1').inner_text
     image_url = page.at(".ArticleImgWidthAuto a img")[:src] if page.at('.ArticleImgWidthAuto a img')
     page_url = link
-    news = News.where(title: title).first_or_initialize
+    news = Product.where(title: title).first_or_initialize
     news.title = title
     news.image_url = image_url
     news.page_url = page_url
