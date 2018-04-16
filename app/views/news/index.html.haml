@@ -103,9 +103,8 @@
         .joboff-content__top__right
           = link_to "ジョブオファー 一覧を見る"
       %ul.joboff-content__list
-        = render 'news/top-main-content-template/joboff-content-block'
-        = render 'news/top-main-content-template/joboff-content-block'
-        = render 'news/top-main-content-template/joboff-content-block'
+        - @joboff_news.each do |news|
+          = render 'news/top-main-content-template/joboff-content-block', news: news
     .popu-news-content
       .popu-news-content__top
         過去の人気特集
@@ -117,9 +116,8 @@
       .anacomment-content__top
         アナリシス
       %ul.anacomment-content__list
-        = render 'news/top-main-content-template/anacomment-content-block'
-        = render 'news/top-main-content-template/anacomment-content-block'
-        = render 'news/top-main-content-template/anacomment-content-block'
+        - @ana_news.each do |news|
+          = render 'news/top-main-content-template/anacomment-content-block', news: news
     .user-rank-content
       .user-rank-content__top
         .user-rank-content__top__left
