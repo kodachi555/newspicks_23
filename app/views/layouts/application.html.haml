@@ -7,6 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render partial: "layouts/left-menu.haml"
     .main-header
       .left-area
         .menu
@@ -34,5 +35,5 @@
         .item-pick
           = link_to "" do
             = image_tag "pen.181d3e93.png"
+    = render partial: "layouts/right-menu.haml"
     = yield
-
