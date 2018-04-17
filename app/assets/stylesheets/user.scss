@@ -1,0 +1,235 @@
+.user-main-content {
+  font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+  .profile {
+    height: 140px;
+    width: 100%;
+    border-bottom: 1px solid #EAEAEA;
+    padding-top: 50px;
+    .user-profile {
+      width: 1040px;
+      height: 80px;
+      margin: 0 160px;
+      padding: 30px 20px 30px 20px;
+      .detail {
+        display: block;
+        .cover {
+          height: 80px;
+          width: 80px;
+          background-color: black;
+          float: left;
+          margin-left: 10px;
+        }
+        .lavels {
+          height: 63px;
+          width: 920px;
+          margin-left: 120px;
+          .username {
+            height: 30px;
+            width: 920px;
+            font-size: 20px;
+            font-weight: 700;
+          }
+          .like-metor {
+            color: #999;
+            height: 21px;
+            width: 920px;
+            margin: 15px 0 2px 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .follow {
+    width: 100%;
+    height: 54px;
+    .relative-box {
+      height: 54px;
+      width: 1080px;
+      margin: auto;
+      position: relative;
+      text-align: center;
+      font-weight: 700;
+      color: #222;
+      .picks {
+      height: 19.047px;
+      width: 48px;
+      padding: 16px 24px;
+      border-bottom: 2.953px;
+      float: left;
+      font-size: 14px;
+      }
+      .followings {
+        height: 38px;
+        width: 48px;
+        padding: 8px 24px;
+        float:left;
+        font-family: Helvetica,Arial,sans-serif;
+        .count {
+          width: 48px;
+          height: 28px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .unit {
+          width: 48px;
+          height: 10px;
+          margin-left: 4px;
+          font-size: 10px;
+          color: #999;
+          line-height: 100%;
+          font-weight: 100;
+        }
+      }
+      .followers {
+        height: 38px;
+        width: 48px;
+        padding: 8px 24px;
+        float:left;
+        font-family: Helvetica,Arial,sans-serif;
+        color: #222;
+        .count {
+          width: 48px;
+          height: 28px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .unit {
+          width: 56px;
+          height: 10px;
+          font-size: 10px;
+          color: #999;
+          line-height: 100%;
+          font-weight: 100;
+        }
+      }
+      .search-box-container{
+        width: 193px;
+        height: 54px;
+        float: right;
+        border-left: 1px solid #EAEAEA;
+        border-right: 1px solid #EAEAEA;
+        .search-box {
+          margin-top: 12px;
+          background: #FFF;
+          width: 193px;
+          height: 30px;
+          .search-icon {
+          width: 15px;
+          height: 15px;
+          margin: 7px 0 0 15px;
+          float: left;
+          }
+          .search-wrapper {
+            width: 163px;
+            height: 30px;
+            float: left;
+            .search {
+              width: 150px;
+              height: 21px;
+              margin-top: 5px;
+              padding-left: 8px;
+              font-weight: 100;
+              font-size: 14px;
+              border: 1px solid #0000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    padding-top: 25px;
+    background: #EFEFEF;
+    height: 100%;
+    background-size:cover;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      box-sizing: border-box;
+      max-width: 1200px;
+      padding: 0 60px 0 60px;
+    }
+  }
+}
+
+.usertitle{
+  width: 344px;
+  height: 131px;
+  background-color: white;
+  margin: 0 15px 15px 0;
+  float: left;
+  .follow__tag {
+    width: 312px;
+    height: 99px;
+    padding: 16px;
+    position: relative;
+    .usercover {
+      width: 42px;
+      height: 42px;
+      float: left;
+      background-color: black;
+    }
+    .profile-container {
+      width: 260px;
+      height: 48px;
+      margin-left: 52px;
+      .name-wrapper {
+        width: 260px;
+        height: 20px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .title {
+        width: 260px;
+        height: 12px;
+        margin-top: 2px;
+        line-height: 100%;
+        min-height: 12px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+    .counts {
+      width: 312px;
+      height: 40px;
+      margin-top: 16px;
+      .reration {
+        width: 50px;
+        height: 40px;
+        padding: 0 10px;
+        text-align: center;
+        display: inline-block;
+        .t {
+          color: #999;
+          font-size: 8px;
+        }
+        .v {
+          color: #15274D;
+          font-size: 12px;
+        }
+      }
+      .vr {
+        width: 1px;
+        height: 25px;
+        display: inline-block;
+        background: #D9D9D9;
+      }
+    }
+    .follow-btn {
+      width: 75px;
+      height: 27.531px;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      cursor: pointer;
+      .following {
+        width: 75px;
+        height: 27.531px;
+      }
+    }
+  }
+}

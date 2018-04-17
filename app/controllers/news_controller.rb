@@ -21,4 +21,5 @@ class NewsController < ApplicationController
 
   def search
   end
+
 end

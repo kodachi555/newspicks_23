@@ -4,12 +4,17 @@ Rails.application.routes.draw do
   resources :products
   resources :news do
     collection do
-      get 'search'
+      get :search
     end
   end
   resources :settings, only: [] do
     collection do
       get :profile, :mail, :password, :subscriptions, :mute, :social, :query, :newsletters, :scout
+    end
+  end
+  resources :user do
+    collection do
+      get :picks, :follow
     end
   end
 end
