@@ -6,11 +6,31 @@ git_source(:github) do |repo_name|
 end
 
 
+gem "font-awesome-rails"
+
+
+# 開発環境にのみ必要
+group :development do
+     gem 'rspec'
+end
+
+# テスト環境にのみ必要
+group :test do
+     gem 'rspec'
+end
+
+# 本番環境にのみ必要
+group :production do
+     gem 'unicorn'
+end
+
+gem 'haml-rails'
+gem 'erb2haml'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7'
-# Use sqlite3 as the database for Active Record
-gem 'mysql2', '0.3.18'
- # Use Puma as the app server
+gem 'rails', '~> 5.0.1'
+# Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+# Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -41,11 +61,16 @@ gem 'nokogiri'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'faker'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 2.0'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
@@ -57,3 +82,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'devise'
+gem 'fog'
