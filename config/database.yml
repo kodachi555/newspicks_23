@@ -1,33 +1,33 @@
-# MySQL.  Versions 5.0+ are recommended.
+# MySQL. Versions 5.0 and up are supported.
 #
-# Install the MYSQL driver
+# Install the MySQL driver
 #   gem install mysql2
 #
 # Ensure the MySQL gem is defined in your Gemfile
 #   gem 'mysql2'
 #
 # And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: password
   socket: /tmp/mysql.sock
   timeout: 5000
 
 development:
   <<: *default
-  database: Newspicks23_development
+  database: newspicks_23_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Newspicks23_test
+  database: newspicks_23_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -50,6 +50,5 @@ test:
 #
 production:
   <<: *default
-  database: Newspicks23_production
-  username: Newspicks23
-  password: <%= ENV['CATMATCH_DATABASE_PASSWORD'] %>
+  database: newspicks_23_production
+  socket: /var/lib/mysql/mysql.sock
