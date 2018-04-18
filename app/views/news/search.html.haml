@@ -30,7 +30,7 @@
             .search-result-page-leftcontent-news-content-tag
               = product.site_name
               |
-              = product.created_at
+              = product.created_at.to_s(:created_at)
             .search-result-page-leftcontent-news-content-text 記事の内容は二行まで見れるようになっています。記事の内容は二行まで見れるようになっています。記事の内容は二行まで見れるようになっています。記事の内容は二行まで見れるようになっています。記事の内容は二行まで見れるようになっています。
 
     .search-result-page-rightcontent
