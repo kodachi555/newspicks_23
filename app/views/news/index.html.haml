@@ -1,10 +1,4 @@
-//= render 'main-header'
 = render 'side-bar'
-/ = render 'search-result-top'
-/ = render 'search-result-user'
-/ = render 'search-result-comment'
-/ = render 'search-result-company'
-/ = render 'top-main-content'
 .top-main-content
   = render 'news/top-main-content-template/main-content-header'
   .main
@@ -25,7 +19,7 @@
         .origin-news-content__top__left
           Newspicksオリジナル
         .origin-news-content__top__right
-          = link_to "NewsPicks オリジナル記事一覧を見る", ""
+          = link_to "NewsPicks オリジナル記事一覧を見る", "/categories/11"
       %ul.origin-news-content__list
         - @origin_news.each do |news|
           = render 'news/top-main-content-template/origin-content-block', news: news
@@ -35,8 +29,7 @@
         .futured-content__top__left
           特集:ニューエリート
         .futured-content__top__right
-          = link_to "特集:ニューエリート 一覧をみる", ""
-
+          = link_to "特集:ニューエリート 一覧をみる", "/categories/10"
       %ul.futured-content__list
         - @futured_news.each do |news|
           = render 'news/top-main-content-template/futured-content-block', news: news
@@ -47,7 +40,7 @@
         .tech-content__top__left
           テクノロジー
         .tech-content__top__right
-          = link_to "テクノロジー 一覧を見る"
+          = link_to "テクノロジー 一覧を見る", "/categories/1"
       %ul.tech-content__list
         - @tech_news.each do |news|
           = render 'news/top-main-content-template/tech-content-block', news: news
@@ -56,7 +49,7 @@
         .biz-content__top__left
           ビジネス
         .biz-content__top__right
-          = link_to "ビジネス 一覧を見る"
+          = link_to "ビジネス 一覧を見る", "/categories/2"
       %ul.biz-content__list
         - @biz_news.each do |news|
           = render 'news/top-main-content-template/biz-content-block', news: news
@@ -65,7 +58,7 @@
         .pol-eco-content__top__left
           政治・経済
         .pol-eco-content__top__right
-          = link_to "政治・経済 一覧を見る"
+          = link_to "政治・経済 一覧を見る", "/categories/3"
       %ul.pol-eco-content__list
         - @pol_news.each do |news|
           = render 'news/top-main-content-template/pol-eco-content-block', news: news
@@ -74,7 +67,7 @@
         .fin-content__top__left
           金融・マーケット
         .fin-content__top__right
-          = link_to "金融・マーケット 一覧を見る"
+          = link_to "金融・マーケット 一覧を見る", "/categories/4"
       %ul.fin-content__list
         - @fin_news.each do |news|
           = render 'news/top-main-content-template/fin-content-block', news: news
@@ -83,7 +76,7 @@
         .carrior-content__top__left
           キャリア・教育
         .carrior-content__top__right
-          = link_to "キャリア・教育 一覧を見る"
+          = link_to "キャリア・教育 一覧を見る", "/categories/5"
       %ul.carrior-content__list
         - @carrior_news.each do |news|
           = render 'news/top-main-content-template/carrior-content-block', news: news
@@ -92,7 +85,7 @@
         .sports-content__top__left
           社会・スポーツ
         .sports-content__top__right
-          = link_to "社会・スポーツ 一覧を見る"
+          = link_to "社会・スポーツ 一覧を見る", "/categories/6"
       %ul.sports-content__list
         - @sports_news.each do |news|
           = render 'news/top-main-content-template/sports-content-block', news: news
@@ -101,7 +94,7 @@
         .joboff-content__top__left
           ジョブオファー
         .joboff-content__top__right
-          = link_to "ジョブオファー 一覧を見る"
+          = link_to "ジョブオファー 一覧を見る", "/categories/7"
       %ul.joboff-content__list
         - @joboff_news.each do |news|
           = render 'news/top-main-content-template/joboff-content-block', news: news
@@ -114,7 +107,7 @@
         = render 'news/top-main-content-template/popu-news-content-block'
     .anacomment-content
       .anacomment-content__top
-        アナリシス
+        = link_to "アナリシス", "/categories/8"
       %ul.anacomment-content__list
         - @ana_news.each do |news|
           = render 'news/top-main-content-template/anacomment-content-block', news: news
