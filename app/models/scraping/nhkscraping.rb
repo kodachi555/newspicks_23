@@ -11,7 +11,7 @@ class Nhkscraping #現状うまくデータを取得できていないため使�
     news.title = title
     news.image_url = image_url
     news.page_url = page_url
-    news.site_name = "時事ドットコム"
+    news.site_name = "NHKニュース"
     news.category_id = 9
     news.save
   end
