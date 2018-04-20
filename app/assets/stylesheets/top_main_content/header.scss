@@ -14,7 +14,6 @@
     display: flex;
     background-color: #000;
     &__left {
-      //display: flex;
       position: relative;
       width: 70%;
       color: #FFF;
@@ -22,7 +21,6 @@
       overflow-x: auto;
       overflow-y: hidden;
       white-space: nowrap;
-      scroll: right;
       .block_area {
         display: inline-block;
         position: relative;
