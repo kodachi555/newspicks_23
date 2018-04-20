@@ -7,9 +7,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render partial: "layouts/left-menu.haml"
     .main-header
       .left-area
-        .menu
+        .menu.pulldownButton
           = image_tag "humberger.de26402b.png"
         .search-bar
           = form_tag('/news/search', method: :get) do
@@ -20,7 +21,7 @@
           = link_to root_path do
             = image_tag "logo_type.086ed6f5.png"
       .right-area
-        .user-bar
+        .user-bar.pulldownButton
           .user-bar__left
             = image_tag "cover.png"
           .user-bar__right
@@ -28,11 +29,9 @@
               山田太郎
             .right-bottom
               学生会員
-        .notification-bar
-          = link_to "" do
-            = image_tag "flag.b91825e7.png"
-        .item-pick
-          = link_to "" do
-            = image_tag "pen.181d3e93.png"
+        .notification-bar.pulldownButton
+          = image_tag "flag.b91825e7.png"
+        .item-pick.pulldownButton
+          = image_tag "pen.181d3e93.png"
+    = render partial: "layouts/right-menu.haml"
     = yield
-
