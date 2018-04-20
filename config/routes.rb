@@ -12,4 +12,5 @@ Rails.application.routes.draw do
       get :profile, :mail, :password, :subscriptions, :mute, :social, :query, :newsletters, :scout
     end
   end
+  resources :categories, only: :show
 end
