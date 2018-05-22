@@ -1,0 +1,63 @@
+.usershowpg
+  .top-area
+    .center-main-area
+      .user
+        .left
+          = image_tag "cover.png"
+        .right
+          .top
+            .name
+              = @user.username
+          .bottom
+            .totallike
+              総 Like 数:
+              = @like_count
+              /= @user_has_likes.count
+    .bottom-main-area
+      .navi
+        .left
+          .pick-block
+            .pick
+              Picks
+          = render 'follow_count'
+        .right
+          - if user_signed_in?
+            - if current_user.id == @user.id
+              .searchpicks
+                = form_tag('/news/search', method: :get) do
+                  = image_tag "ic_search.a18e89c7.png"
+                  %input.search__query{name: "keyword", placeholder: "自分のpickを検索する", type: "text", value: ""}
+            - else
+              = render 'follow_form'
+
+  .bottom-area
+    .user-pick
+      %ul.user-pick__list
+        - @picks.each do |pick|
+          %li.user-pick__list__block
+            .image-area
+              = link_to "/news/#{pick.product_id}" do
+                %img{style: "background-image: url('#{pick.product.image_url}')"}
+            .text-area
+              .news-title
+                = pick.product.title
+              .picker-space
+                .picker-space__top
+                  .picker-space__top__left
+                  .picker-space__top__right
+                    .top
+                      = pick.user.username
+                    .bottom
+                      = pick.user.company
+                      = pick.user.position
+                .picker-space__bottom
+                  .comment
+                    = pick.text
+              / %ul.picker-list
+              /   %li.picker-list__avatar
+              /   %li.picker-list__avatar
+              .meta
+                .news-site
+                  = pick.product.site_name
+                .pick-time
+                  = time_ago_in_words(pick.product.created_at) + "前"

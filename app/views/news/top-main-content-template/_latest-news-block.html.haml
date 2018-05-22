@@ -6,5 +6,5 @@
     .news-block__bottom
       .news-text
       .published-time
-        3時間前
+        = time_ago_in_words(news.created_at) + "前"
 

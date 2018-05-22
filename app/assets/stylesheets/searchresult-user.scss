@@ -1,7 +1,10 @@
 .search-result-page-user{
   background-color: #f5f5f5;
-  width: 100%;
+  width: 1250px;
   height: 100%;
+  margin: 0 auto;
+  padding: 20px 50px;
+
   &-users{
     height: 100%;
     margin: 0 30px 0 20px;
@@ -13,13 +16,17 @@
       width: 340px;
       float: left;
       margin: 0 0 20px 15px;
+      position: relative;
       &-img{
         margin: 15px 5px 0 15px;
         float: left;
       }
       &-img img{
+        border-radius: 50px;
         width: 50px;
         height: 50px;
+        background-image: url("https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000");
+        background-size: cover;
       }
       &-name{
       margin: 15px 0 0 0 ;
@@ -30,13 +37,17 @@
       font-size: 12px;
     }
     &-followinfo{
-      margin: 35px 5px 0 25px;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
       clear: both;
-      width: 120px;
+      width: 200px;
       color: gray;
       font-size: 8px;
       text-align: center;
       &-following{
+        width: 100px;
+        box-sizing: border-box;
         float: left;
         border-right: solid 1px #EAEAEA;
         padding-right: 5px;
@@ -46,9 +57,13 @@
       }
     }
     &-followimg{
+      position: absolute;
       clear: both;
       float: right;
-      margin: -30px 10px 0 0;
+      bottom: 10px;
+      right: 20px;
+      //margin: -30px 10px 0 0;
+      box-sizing: border-box;
     }
     &-followimg img{
       width: 70px;

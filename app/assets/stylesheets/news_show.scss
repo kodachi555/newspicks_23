@@ -27,14 +27,16 @@ hr {
     width: 656px;
     background-color: #FFF;
     .news__image {
-      height: 262px;
+      height: 500px;
       width: 100%;
       position: relative;
       // background-image: image-url("2931177.jpeg");
       background-position: center;
       background-size: cover;
+      // cursor: pointer;
       z-index: 0;
       img {
+        overflow: hidden;
         height: 100%;
         width: 100%;
         background-position: center;
@@ -159,9 +161,12 @@ hr {
         padding: 13px;
         border: 1px solid #d9d9d9;
         border-radius: 2px;
-        height: 16px;
+        height: 50px;
         line-height: 1.3em;
         transition: box-shadow .1s linear,border 1s linear;
+      }
+      .hidden {
+        display: none;
       }
     }
   }
@@ -220,6 +225,11 @@ hr {
         width: 40px;
         background-position: center;
         background-size: cover;
+        img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
       }
     }
     .user-profile {
@@ -293,10 +303,10 @@ hr {
   .like-panel {
     position: absolute;
     right: 0;
-    top: 0;
+    //top: 0;
     bottom: 0;
     text-align: center;
-    width: 34px;
+    //width: 34px;
     .like {
       display: table;
       width: 100%;

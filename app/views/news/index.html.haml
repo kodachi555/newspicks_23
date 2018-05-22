@@ -102,9 +102,8 @@
       .popu-news-content__top
         過去の人気特集
       %ul.popu-news-content__list
-        = render 'news/top-main-content-template/popu-news-content-block'
-        = render 'news/top-main-content-template/popu-news-content-block'
-        = render 'news/top-main-content-template/popu-news-content-block'
+        - @popu_news.each do |news|
+          = render 'news/top-main-content-template/popu-news-content-block', news: news
     .anacomment-content
       .anacomment-content__top
         = link_to "アナリシス", "/categories/8"
@@ -116,23 +115,18 @@
         .user-rank-content__top__left
           ユーザーランキング
         .user-rank-content__top__right
-          = link_to "コメントランキング 一覧を見る"
+          //= link_to "コメントランキング 一覧を見る"
       %ul.user-rank-content__list
-        = render 'news/top-main-content-template/user-rank-content-block'
-        = render 'news/top-main-content-template/user-rank-content-block'
-        = render 'news/top-main-content-template/user-rank-content-block'
-        = render 'news/top-main-content-template/user-rank-content-block'
+        - @popu_users.each_with_index do|user, i|
+          = render 'news/top-main-content-template/user-rank-content-block', user: user, i: i +1
     .comment-rank-content
       .comment-rank-content__top
         .comment-rank-content__top__left
           コメントランキング
         .comment-rank-content__top__right
-          = link_to "コメントランキング 一覧を見る"
       %ul.comment-rank-content__list
-        = render 'news/top-main-content-template/comment-rank-content-block'
-        = render 'news/top-main-content-template/comment-rank-content-block'
-        = render 'news/top-main-content-template/comment-rank-content-block'
-        = render 'news/top-main-content-template/comment-rank-content-block'
+        - @pick_rank.each_with_index do |pick, i|
+          = render 'news/top-main-content-template/comment-rank-content-block', pick: pick, i: i + 1
   .footer
     .footer-block
       .footer-block__links

@@ -36,10 +36,13 @@ ul {
     height: 150px;
 }
 .user-icon img {
+    border-radius: 50px;
     height: 48px;
     width: 48px;
     display: block;
     margin: 0 auto;
+    background-image: url("https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000");
+    background-size: cover;
 }
 .user-info{
   width: 100%;
@@ -152,11 +155,15 @@ ul {
   .picker{
     margin: 10px;
     img{
+      border-radius: 50px;
+      background-image: url("https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000");
+      background-size: cover;
       width: 28px;
       height: 28px;
       float: left;
     }
     .picker-name{
+      padding-left: 40px;
       font-size: 12px;
     }
     .picker-time{
@@ -168,10 +175,14 @@ ul {
       height: 40px;
       width: 100%;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .picker-news{
+      line-height: 28px;
+      color: #37509C;
       font-size: 12px;
-      height: 40px;
+      height: auto;
       width: 100%;
       overflow: hidden;
     }

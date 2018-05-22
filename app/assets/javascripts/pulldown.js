@@ -38,6 +38,5 @@ $(document).on('turbolinks:load',function(){
         $(this).attr('style',"display: none;");
       }
     });
-
   });
 });

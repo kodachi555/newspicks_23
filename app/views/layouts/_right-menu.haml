@@ -1,19 +1,24 @@
 .pulldowns.right-menu__user#menu-user{style:"display: none;"}
-  .popover
+  .pop
     .nozzle-border
     .nozzle
     .user-menu
-      = link_to "マイピックス", "", class: "menu-item"
+      - if user_signed_in?
+        = link_to "マイピックス", "/users/#{current_user.id}", class: "menu-item"
       = link_to "ユーザを探す", "", class: "menu-item"
       %hr{class: "top separator"}
       = link_to "アカデミア", "", class: "menu-item"
       = link_to "有料サービスについて", "", class: "menu-item"
       %hr{class: "bottom separator"}
-      = link_to "設定", profile_settings_path, class: "menu-item"
+      - if user_signed_in?
+        = link_to "設定", profile_settings_path, class: "menu-item"
+        = link_to "ログアウト", destroy_user_session_path, :method => :delete, class: "menu-item"
+      - unless user_signed_in?
+        = link_to "新規登録", new_user_registration_path, class: "menu-item"
+        = link_to "ログイン", new_user_session_path, class: "menu-item"
       = link_to "お問い合わせ", "", class: "menu-item", target: "_blank"
-      = link_to "ログアウト", destroy_user_session_path, class: "menu-item"
 .pulldowns.right-menu__notification#menu-notification{style:"display: none;"}
-  .popover
+  .pop
     .nozzle-border
     .nozzle
     .notification-header
@@ -27,7 +32,7 @@
       .loading.center{style: "display: none;"}
         %img
 .pulldowns.right-menu__search-history#menu-search-history{style:"display: none;"}
-  .popover
+  .pop
     .search-header
       .search-title 最近の検索
       .clear-history-label 検索履歴を消去

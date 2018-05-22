@@ -55,6 +55,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'mechanize'
 gem 'nokogiri'
+gem 'bootstrap-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -83,3 +84,5 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'devise'
 gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick'

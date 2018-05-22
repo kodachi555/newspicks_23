@@ -3,21 +3,36 @@
   .index-content
     .top-area
       .num
-        1
+        = i
       .user-meta
         .avatar
-          = link_to "/news/1" do
-            %img{style: "background-image: url('https://newspicks.com/users/100616/cover?width=100&height=100&t=20180406010046000')"}
+          = link_to "/users/#{pick.user.id}" do
+            - if pick.user.avatar.present?
+              %img{style: "background-image: url('#{news.picks.last.user.avatar}')"}
+            - else
+              %img
         .name
-          堀江貴文
+          = pick.user.username
       .following
-        = link_to "" do
-          = image_tag "follow-button-off.5076162e.png";
+        - if user_signed_in?
+          - if current_user.id == pick.user.id
+          - else
+            - unless current_user.id == pick.user.id
+              #follow_form
+                - if current_user.following?(pick.user)
+                  = form_for(current_user.following_relationships.find_by(following_id: pick.user.id), html: {method: :delete}, remote: true) do |f|
+                    %button
+                      = image_tag "follow-button-on"
+                - else
+                  = form_for(current_user.following_relationships.build(following_id: pick.user.id), remote: true) do |f|
+                    = f.hidden_field :following_id
+                    %button
+                      = image_tag "follow-button-off.5076162e.png"
     .bottom-text-area
       .comment-content
         .comment-content__inner
-          肉うめえええええ
+          = pick.text
       .news-content
         .news-content__inner
-          なんとかニュース
+          = pick.product.title
 

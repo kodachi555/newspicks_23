@@ -1,41 +1,60 @@
 .header
   //トップ画面 ヘッダー画面
-  .header__left
-    - @header_left_news.each do |news|
-      = link_to "/news/#{news.id}" do
-        .block_area
-          %img{style: "background-image: url('#{news.image_url}')"}
+
+
+  #carousel-example.carousel.slide{"data-ride" => "carousel"}
+    / インジケーターの設置。下部の○●ボタン。
+    %ol.carousel-indicators
+      - @header_left_news.count.times do |index|
+        - if index == 0
+          %li.active{"data-slide-to" => "#{index}", "data-target" => "#carousel-example"}
+        -else
+          %li{"data-slide-to" => "#{index}", "data-target" => "#carousel-example"}
+          / %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "1", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "2", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "3", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "4", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "5", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "6", "data-target" => "#carousel-example"}
+          / %li{"data-slide-to" => "7", "data-target" => "#carousel-example"}
+      / スライドの内容
+    .carousel-inner{role: "listbox"}
+      - @header_left_news.each_with_index do |news, index|
+        - classes = ['item']
+        = content_tag(:div, :class => (index == 0 ? classes << 'active' : classes)) do
+          = link_to "/news/#{news.id}" do
+            %img{style: "background-image: url('#{news.image_url}')"}
           .text-area
             .top-space
               .count-picks
-                64Picks
+                = news.picks.count
+                Picks
             .center-main-space
               .title
-              = news.title
+                = news.title
             .bottom-space
               .news-site-name
                 = news.site_name
               .picks-time
-                3時間前
+                = time_ago_in_words(news.created_at) + "前"
+                / 左右の移動ボタン
+          %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example"}
+            %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+          %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example"}
+            %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
   .header__right
-    .top
-      = link_to "/news/1" do
-        %img{ style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
-      .text-area
-        .top-space
-          .count-picks
-            64Picks
-        .center-main-space
-          .title
-          【速報】ブロックチェーンがやばい！！！
-    .bottom
-      = link_to "/news/1" do
-        %img{ style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
-      .text-area
-        .top-space
-          .count-picks
-            64Picks
-        .center-main-space
-          .title
-          【速報】ブロックチェーンがやばい！！！
+    - @header_right_news.each do |news|
+      .right-content
+        = link_to "/news/#{news.id}" do
+          %img{ style: "background-image: url('#{news.image_url}')"}
+        .text-area
+          .top-space
+            .count-picks
+              = news.picks.count
+              Picks
+          .center-main-space
+            .title
+              = news.title
+
 

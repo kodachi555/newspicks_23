@@ -1,0 +1,7 @@
+#follow-count
+  .follow-block
+    .follow
+      = @user.followings.count
+  .follower-block
+    .follower
+      = @user.followers.count

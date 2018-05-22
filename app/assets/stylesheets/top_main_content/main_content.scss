@@ -1,10 +1,12 @@
 .main {
+  width: 1180px;
   position: relative;
   padding-top: 40px;
   box-sizing: border-box;
   max-width: 1130px;
   margin: 0 auto;
   .main-content {
+    color: #333333;
     box-sizing: border-box;
     padding: 0 50px;
     margin-bottom: 60px;
@@ -31,6 +33,7 @@
             text-size-adjust: 100%;
             line-height: 40px;
             .news-block__top {
+              color: #333333;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
@@ -63,20 +66,26 @@
           img {
             width: 100%;
             height: 100%;
+            background-position: center;
             background-size: cover;
           }
         }
         .text-area {
+          position: relative;
           box-sizing: border-box;
           display: block;
           height: 67%;
+          overflow: hidden;
           .news-title {
+            overflow: hidden;
             font-weight: bold;
             font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
             font-size: 20px;
             padding: 20px 20px 0 20px;
           }
           .picker-space {
+            position: absolute;
+            bottom: 90px;
             padding: 0 20px 0 20px;
             &__top {
               margin-top: 10px;
@@ -84,7 +93,12 @@
               &__left {
                 width: 28px;
                 height: 28px;
-                background-color: black;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  background-image: url("coversquare.png");
+                  background-size: cover;
+                }
               }
               &__right {
                 margin-left: 10px;
@@ -190,26 +204,34 @@
         margin-right: 20px;
         box-sizing: border-box;
         position: relative;
+        overflow: hidden;
         .image-area {
           width: 100%;
           height: 33%;
           img {
             width: 100%;
             height: 100%;
+            background-position: center;
             background-size: cover;
           }
         }
         .text-area {
+          position: relative;
           box-sizing: border-box;
           display: block;
           height: 67%;
+          overflow: hidden;
           .news-title {
+            overflow: hidden;
             font-weight: bold;
             font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
             font-size: 20px;
             padding: 20px 20px 0 20px;
           }
           .picker-space {
+            overflow: hidden;
+            position: absolute;
+            bottom: 90px;
             padding: 0 20px 0 20px;
             &__top {
               margin-top: 10px;
@@ -217,7 +239,12 @@
               &__left {
                 width: 28px;
                 height: 28px;
-                background-color: black;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  background-image: url("coversquare.png");
+                  background-size: cover;
+                }
               }
               &__right {
                 margin-left: 10px;
@@ -274,7 +301,7 @@
   .user-rank-content {
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 1200px;
+    width: 1200px;
     height: 300px;
     padding: 0 50px;
     &__top {
@@ -284,15 +311,18 @@
       box-sizing: border-box;
       &__left {
         float: left;
+        overflow: hidden;
       }
       &__right {
         float: right;
+        overflow: hidden;
       }
     }
     &__list {
       clear: both;
       box-sizing: border-box;
       &__block {
+        overflow: hidden;
         display: inline-block;
         width: 495px;
         background-color: white;
@@ -317,6 +347,7 @@
               width: 48px;
               height: 48px;
               background-size: cover;
+              background-image: url("coversquare.png")
             }
           }
           .user-info {
@@ -354,7 +385,7 @@
   .comment-rank-content {
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 1200px;
+    width: 1200px;
     height: 700px;
     padding: 0 50px;
     &__top {
@@ -398,6 +429,7 @@
                   width: 48px;
                   height: 48px;
                   background-size: cover;
+                  background-image: url("coversquare.png")
                 }
               }
               .name {
@@ -416,11 +448,13 @@
             .comment-content {
               border: solid 1px #EAEAEA;
               height: 90px;
+              overflow: hidden;
               &__inner {
                 padding: 10px 10px 0 10px;
               }
             }
             .news-content {
+              overflow: hidden;
               height: 90px;
               border-right: solid 1px #EAEAEA;
               border-left: solid 1px #EAEAEA;
@@ -522,7 +556,7 @@
   box-sizing: border-box;
   position: absolute;
   height: 100px;
-  max-width: 100%;
+  width: calc(100% - 198px);
   bottom:  0px;
   border-top: 2px solid rgb(217, 217, 217);
   .footer-block {

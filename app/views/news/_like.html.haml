@@ -1,0 +1,25 @@
+.like-wrapper
+  - if user_signed_in?
+    - if pick.like_user(current_user.id)
+      = button_to news_pick_like_path(news_id: pick.product.id, pick_id: pick.id), method: :delete, id: "like-buttons", remote: true do
+        = fa_icon "thumbs-up"
+        .count
+          - if pick.likes_count == nil
+            0
+          - else
+            = pick.likes_count
+        .like-label Likes
+    - else
+      = button_to news_pick_likes_path(news_id: pick.product.id, pick_id: pick.id), id: "like-buttons", remote: true do
+        = image_tag "like.png"
+        .count
+          - if pick.likes_count == nil
+            0
+          - else
+            = pick.likes_count
+        .like-label Likes
+  - else
+    = image_tag "like.png"
+    .count
+      = pick.likes_count
+    .like-label Likes

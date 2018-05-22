@@ -1,0 +1,8 @@
+= button_to news_pick_like_path(news_id: pick.product.id, pick_id: pick.id), method: :delete, id: "unlike-buttons", remote: true do
+  = fa_icon "thumbs-up"
+  .count
+    - if pick.likes_count == nil
+      0
+    - else
+      = pick.likes_count
+  .like-label Likes
