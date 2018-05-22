@@ -1,4 +1,7 @@
 class SettingsController < ApplicationController
+  before_filter :authenticate_user!
+  before_action :set_user
+
   def profile
   end
 
@@ -26,4 +29,8 @@ class SettingsController < ApplicationController
   def scout
   end
 
+  private
+  def set_user
+    @user = current_user
+  end
 end
