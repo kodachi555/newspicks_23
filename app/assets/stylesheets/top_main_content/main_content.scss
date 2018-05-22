@@ -490,6 +490,9 @@
           }
           .inherit-color {
             float: right;
+            a {
+              color: white;
+            }
           }
         }
         &__main {
@@ -499,7 +502,7 @@
           box-sizing: border-box;
           &__left {
             float: left;
-            .top, .bottom{
+            .news_block{
               height: 120px;
               width: 480px;
               background-color: white;
@@ -525,6 +528,7 @@
 
                 .title-area {
                   font-weight: bold;
+                  color: black;
                 }
                 .bottom-area {
                   position: absolute;
@@ -544,7 +548,11 @@
             float: right;
             width: 480px;
             height: 270px;
-            background-color: red;
+            iframe{
+              width: 100%;
+              height: 100%;
+              background-size: cover;
+            }
             //画像,動画を入れるときはbackground-color消してください！！
           }
         }

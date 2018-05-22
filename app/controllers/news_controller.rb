@@ -30,6 +30,7 @@ class NewsController < ApplicationController
     user_ids = Pick.group(:user_id).limit(4).order("sum_likes_count DESC").sum(:likes_count).keys
     @popu_users = user_ids.map{|id| User.find(id)}
     @popu_picks = Pick.order("id DESC").limit(10)
+    @inov_news = Product.where("category_id = '9'").order("id DESC").limit(2)
   end
 
   def search
