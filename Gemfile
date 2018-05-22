@@ -55,7 +55,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'mechanize'
 gem 'nokogiri'
-gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

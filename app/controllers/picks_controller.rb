@@ -1,6 +1,6 @@
 class PicksController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:create]
 
   def create
     @pick = Pick.new(text: params[:text], product_id: params[:product_id], user_id: params[:user_id])

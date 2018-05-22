@@ -32,13 +32,9 @@
           box-sizing: border-box;
           .top {
             height: 50px;
-            .name {
-            }
           }
           .bottom {
             height: 75px;
-            .totallike {
-            }
           }
         }
       }
@@ -57,22 +53,14 @@
           height: 100%;
           .pick-block {
             padding: 20px;
-            .pick {
-
-            }
           }
           #follow-count {
             display: flex;
             .follow-block {
               padding: 20px;
-              .follow {
-              }
             }
             .follower-block {
               padding: 20px;
-              .follower {
-
-              }
             }
           }
         }
@@ -165,8 +153,6 @@
                 &__right {
                   margin-left: 10px;
                   line-height: 25px;
-                  .top {
-                  }
                   .bottom {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -201,8 +187,6 @@
               display: flex;
               padding: 20px;
               color: #999;
-              .news-site {
-              }
               .pick-time {
                 margin-left: 10px;
               }
