@@ -1,91 +1,169 @@
 .top-main-content {
+  min-width: 100%;
+  width: 1440px;
   background-color: #EFEFEF;
-  width: 100%;
-  height: 9800px;
+  //width: 100%;
+  height: 9700px;
   padding: 50px 0 0 192px;
   box-sizing: border-box;
   z-index: 0;
-  overflow: auto;
   position: relative;
   .header {
-    min-height: 400px;
+    min-width: 1248px;
+    height: 400px;
     box-sizing: border-box;
     display: block;
     display: flex;
     background-color: #000;
-    &__left {
-      position: relative;
+    #carousel-example.carousel.slide {
       width: 70%;
+      height: 100%;
       color: #FFF;
       font-family: sans-serif;
-      overflow-x: auto;
-      overflow-y: hidden;
       white-space: nowrap;
-      .block_area {
-        display: inline-block;
-        position: relative;
-        height: 100%;
-        width: 100%;
-        img {
-          height: 100%;
+      .carousel-indicators {
+      }
+      .carousel-inner {
+        display: flex;
+        .item {
+          height: 400px;
           width: 100%;
-          background-size: cover;
-          opacity: .7;
-        }
-        .text-area {
-          position: absolute;
-          width: 94%;
-          right: 5%;
-          left: 5.4%;
-          bottom: 10%;
-          .top-space {
-            width: 80px;
-            height: 32px;
-            text-align: center;
-            border: 1px solid #FFF;
-            margin-bottom: 8px;
-            .count-picks {
-              padding-top: 8px;
-              display: inline-block;
-              font-size: 10px;
+          img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: .7;
+          }
+          .text-area {
+            color: #FFF;
+            overflow: hidden;
+            position: absolute;
+            width: 94%;
+            right: 5%;
+            left: 5.4%;
+            bottom: 10%;
+            .top-space {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 90px;
+              height: 40px;
+              text-align: center;
+              border: 1px solid #FFF;
+              margin-bottom: 8px;
+              box-sizing: border-box;
+              .count-picks {
+                box-sizing: border-box;
+                padding-top: 5px;
+                display: inline-block;
+                font-size: 10px;
+              }
             }
-          }
-          .center-main-space {
-            width: 80%;
-            font-size: 24px;
-            letter-spacing:  1px;
-            margin-bottom: 4px;
-            max-height: 65px;
-            font-weight: bold;
-          }
-          .bottom-space {
-            display: flex;
-            .picks-time {
-              padding-left: 5px;
+            .center-main-space {
+              width: 80%;
+              font-size: 24px;
+              letter-spacing:  1px;
+              margin-bottom: 4px;
+              max-height: 65px;
+              font-weight: bold;
+            }
+            .bottom-space {
+              display: flex;
+              .picks-time {
+                padding-left: 5px;
+              }
             }
           }
         }
       }
     }
-    &__left:hover {
+    #carousel-example.carousel.slide :hover {
       img {
         opacity: 0.4;
       }
     }
+    // &__left {
+    //   position: relative;
+    //   width: 70%;
+    //   height: 100%;
+    //   color: #FFF;
+    //   font-family: sans-serif;
+    //   //overflow-x: auto;
+    //   //overflow-y: hidden;
+    //   white-space: nowrap;
+    //   .block_area {
+    //     display: inline-block;
+    //     position: relative;
+    //     height: 100%;
+    //     width: 100%;
+    //     img {
+    //       height: 100%;
+    //       width: 100%;
+    //       background-size: cover;
+    //       background-position: center;
+    //       opacity: .7;
+    //     }
+    //     .text-area {
+    //       color: #FFF;
+    //       overflow: hidden;
+    //       position: absolute;
+    //       width: 94%;
+    //       right: 5%;
+    //       left: 5.4%;
+    //       bottom: 10%;
+    //       .top-space {
+    //         width: 80px;
+    //         height: 32px;
+    //         text-align: center;
+    //         border: 1px solid #FFF;
+    //         margin-bottom: 8px;
+    //         .count-picks {
+    //           padding-top: 8px;
+    //           display: inline-block;
+    //           font-size: 10px;
+    //         }
+    //       }
+    //       .center-main-space {
+    //         width: 80%;
+    //         font-size: 24px;
+    //         letter-spacing:  1px;
+    //         margin-bottom: 4px;
+    //         max-height: 65px;
+    //         font-weight: bold;
+    //       }
+    //       .bottom-space {
+    //         display: flex;
+    //         .picks-time {
+    //           padding-left: 5px;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // &__left:hover {
+    //   img {
+    //     opacity: 0.4;
+    //   }
+    // }
     &__right {
+      min-width: calc(1440px - 1248px);
       padding-left: 1px;
-      min-width: 30%;
+      width: 30%;
       color: #FFF;
-      .top, .bottom{
+      .right-content{
         height: 50%;
         position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
         img {
           width: 100%;
           height: 100%;
           background-size: cover;
+          background-position: center;
           opacity: .7;
         }
         .text-area {
+          color: #FFF;
           position: absolute;
           width: 94%;
           right: 5%;
@@ -95,10 +173,13 @@
             width: 80px;
             height: 30px;
             text-align: center;
-            //line-height: relative;
             border: 1px solid #FFF;
             margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
             .count-picks {
+              overflow: hidden;
+              text-overflow: ellipsis;
               font-size: 4px;
               display: inline-block;
             }
@@ -113,7 +194,7 @@
           }
         }
       }
-      .top:hover, .bottom:hover {
+      .right-content:hover{
         img {
           opacity: 0.4;
         }

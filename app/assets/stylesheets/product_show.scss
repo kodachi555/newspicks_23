@@ -19,6 +19,7 @@ hr {
  z-index: 1000;
 }
 .news_detail {
+   min-height: 100vh;
    margin-left: 192px;
    padding: 110px 90px 0;
    background-color: #EFEFEF;
@@ -153,7 +154,7 @@ hr {
        padding: 13px;
        border: 1px solid #d9d9d9;
        border-radius: 2px;
-       height: 16px;
+       height: 50px;
        line-height: 1.3em;
        transition: box-shadow .1s linear,border 1s linear;
      }
@@ -209,7 +210,7 @@ hr {
    align-items: center;
    a {
      .image {
-       // background-image: image-url(“cover.jpg”);
+       background-image: url("coversquare.png");
        height: 40px;
        width: 40px;
        background-position: center;
@@ -287,10 +288,10 @@ hr {
  .like-panel {
    position: absolute;
    right: 0;
-   top: 0;
+   //top: 0;
    bottom: 0;
    text-align: center;
-   width: 34px;
+   //width: 34px;
    .like {
      display: table;
      width: 100%;
