@@ -30,7 +30,7 @@
               - if current_user.following?(user)
                 = form_for(current_user.following_relationships.find_by(following_id: user.id), html: {method: :delete}) do |f|
                   %button
-                    = image_tag "follow-button-on"
+                    = image_tag "follow-button-on.png"
               - else
                 = form_for(current_user.following_relationships.build(following_id: user.id)) do |f|
                   = f.hidden_field :following_id
