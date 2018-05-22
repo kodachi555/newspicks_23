@@ -44,6 +44,10 @@
               .picker-space
                 .picker-space__top
                   .picker-space__top__left
+                    - if pick.user.avatar.present?
+                      = image_tag pick.user.avatar
+                    - else
+                      %img
                   .picker-space__top__right
                     .top
                       = pick.user.username

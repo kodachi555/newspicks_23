@@ -148,7 +148,12 @@
                 &__left {
                   width: 28px;
                   height: 28px;
-                  background-color: black;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-image: url("https://newspicks.com/users/3223239/cover?width=64&height=64&t=20180428231443000")
+                  }
                 }
                 &__right {
                   margin-left: 10px;
