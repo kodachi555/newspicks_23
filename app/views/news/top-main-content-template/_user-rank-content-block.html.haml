@@ -5,10 +5,11 @@
       .number
         = i
     .user-avatar
-      - if user.avatar.present?
-        %img{style: "background-image: url('#{user.avatar}')"}
-      - else
-        %img
+      = link_to "/users/#{user.id}" do
+        - if user.avatar.present?
+          %img{style: "background-image: url('#{user.avatar}')"}
+        - else
+          %img
     .user-info
       .name
         = user.username
