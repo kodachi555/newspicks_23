@@ -51,6 +51,9 @@ test:
 #
 production:
   <<: *default
-  database: Newspicks23_production
-  password: <%= ENV['CATMATCH_DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  database: heroku_13281c4203eb2f8
+  username: b179292327880f
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  # database: Newspicks23_production
+  # password: <%= ENV['DATABASE_PASSWORD'] %>
+  # socket: /var/lib/mysql/mysql.sock
