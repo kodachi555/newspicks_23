@@ -9,24 +9,17 @@
         = link_to "イノベーション 一覧を見る", "/categories/9"
     .inovation-content-block__main
       .inovation-content-block__main__left
-        .top
-          .left-img-area
-            %img{style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
-          .right-text-area
-            .title-area
-              スペースX、国際宇宙ステーションに『３トンの物資を配達』
-            .picker-area
-            .bottom-area
-              8時間前
-        .bottom
-          .left-img-area
-            %img{style: "background-image: url('https://contents.newspicks.com/images/news/2931177?updatedAt=20180403020216')"}
-          .right-text-area
-            .title-area
-              スペースX、国際宇宙ステーションに『３トンの物資を配達』
-            .picker-area
-            .bottom-area
-              8時間前
+        - @inov_news.each do |news|
+          = link_to "/news/#{news.id}" do
+            .news_block
+              .left-img-area
+                %img{style: "background-image: url('#{news.image_url}')"}
+              .right-text-area
+                .title-area
+                  = news.title
+                .picker-area
+                .bottom-area
+                  = time_ago_in_words(news.created_at) + "前"
       .inovation-content-block__main__right
-        %img{style: ""}
+        %iframe{:allow => "autoplay; encrypted-media", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/tHK-wKdggbQ", :width => "400"}
 
