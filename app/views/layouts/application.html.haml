@@ -23,12 +23,22 @@
       .right-area
         .user-bar.pulldownButton
           .user-bar__left
-            = image_tag "cover.png"
+            - if user_signed_in?
+              - if current_user.avatar.present?
+                = image_tag current_user.avatar
+              - else
+                %img
           .user-bar__right
-            .right-top
-              山田太郎
-            .right-bottom
-              学生会員
+            - if user_signed_in?
+              .right-top
+                = current_user.username
+              .right-bottom
+                学生会員
+            - unless user_signed_in?
+              .right-top
+                No Account
+              .right-bottom
+                会員
         .notification-bar.pulldownButton
           = image_tag "flag.b91825e7.png"
         .item-pick.pulldownButton

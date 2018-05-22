@@ -5,10 +5,16 @@
       %a{"data-user" => "#", :href => "#"}
         .user-header
           .user-icon
-            = image_tag "https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000"
+            - if current_user.avatar.present?
+              = image_tag current_user.avatar
+            - else
+              = image_tag "https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000"
           .user-info
-            .user-name 苗字 名前
-            .user-title 会社名 役職
+            .user-name
+              = current_user.username
+            .user-title
+              = current_user.company
+              = current_user.position
     .menu-items
       %span.menu-header アカウント
       = link_to "ユーザ情報", profile_settings_path, class: "menu-item"

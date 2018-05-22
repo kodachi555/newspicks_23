@@ -4,126 +4,86 @@
   .news_detail
     .contents__area
       .news__image
-        = image_tag "#{@news.image_url}"
+        %img{style: "background-image: url('#{@product.image_url}')"}
+        / = image_tag "#{@product.image_url}"
         .news_detail__pick
           .news_detail__pick--cover
           .label
-            %span.big 22
+            %span.big
+              = @picks.count
             %span.small Picks
       .news
         .news_text
           %h1.title
-            = @news.title
+            = @product.title
           / %h1.title #米ウェイモ：ホンダとの提携合意に近づく、配送用自動運転車開発で
         .meta
           .meta__block
             .icon_image
               = image_tag "publisher.a6ed8ad6.png"
               .caption
-                = @news.site_name
+                = @product.site_name
           .meta__block
             .icon_image
               = image_tag "time.png"
-              .caption 2時間
-        = link_to '続きを読む', "#{@news.page_url}" , class: 'read-more'
+              .caption
+                = time_ago_in_words(@product.created_at) + "前"
+        = link_to '続きを読む', "#{@product.page_url}" , class: 'read-more'
     .news_comment
       .news_comment-wrap
-        .commentarea
-          %form{:action => ""}
-            .commentarea__left
-              = image_tag "publisher.a6ed8ad6.png"
-              .comment__container
-                %textarea{placeholder: "コメントを書く (任意)"}
-            .commentarea__right
-              .description シェアする
-              .sns.twitter
-                = image_tag "twitter.png"
-              .sns.facebook
-                = image_tag "facebook.png"
-              %input{type: 'submit', value: 'Pick'}/
-        %hr/
+        - if user_signed_in?
+          .commentarea
+            = form_tag "/news/#{@product.id}/picks", method: :post, id: "new_pick" do
+              .commentarea__left
+                = image_tag "publisher.a6ed8ad6.png"
+                .comment__container
+                  %textarea.form_text{name: "text", placeholder: "コメントを書く (任意)"}
+                  %textarea{name: "user_id", class: "hidden"}
+                    = current_user.id
+                  %textarea{name: "product_id", class: "hidden"}
+                    = @product.id
+              .commentarea__right
+                .description シェアする
+                .sns.twitter
+                  = image_tag "twitter.png"
+                .sns.facebook
+                  = image_tag "facebook.png"
+                %input.form_submit{type: 'submit', value: 'Pick'}/
+          %hr/
         .comment
           .populars
             .populars_picker
               %h2 注目のコメント
-              .comment_container
-                .comment-container-wrap
-                  %div
-                    .comment_container__header
-                      .comment_container__header--left
-                        = link_to do
-                          .image
-                        .user-profile
-                          = link_to do
-                            %h3.name
-                              蛯原 健
-                          .job
-                            リブライトパートナーズ 代表パートナー
-                            %span 2時間前
-                      .comment_container__header--ight
-                        .drop-down-button
-                          %div ⋮
-                  .comment_text
-                    .comment_text-wrap
-                      90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
-                    .like-panel
-                      .like
-                        .like-wrapper
-                          = image_tag "like.png"
-                          .count 10
-                          .like-label Likes
+              - if @picks
+                - @picks.each do |pick|
+                  .comment_container
+                    .comment-container-wrap
+                      %div
+                        .comment_container__header
+                          .comment_container__header--left
+                            = link_to "/users/#{pick.user.id}" do
+                              .image
+                                - if pick.user.avatar.present?
+                                  = image_tag pick.user.avatar
+                                - else
+                                  %img
+                            .user-profile
+                              = link_to "/users/#{pick.user.id}" do
+                                %h3.name
+                                  = pick.user.username
+                              .job
+                                = pick.user.company
+                                = pick.user.position
+                                %span
+                                  = time_ago_in_words(pick.created_at) + "前"
+                          .comment_container__header--ight
+                            .drop-down-button
+                              %div ⋮
+                      .comment_text
+                        .comment_text-wrap
+                          = pick.text
+                        .like-panel
+                          .like
+                            .like-wrapper
+                              = render partial: 'news/like', locals: { pick: pick, picks: @picks, likes: @likes, like: @like}
               %hr/
-              .comment_container
-                .comment-container-wrap
-                  %div
-                    .comment_container__header
-                      .comment_container__header--left
-                        = link_to do
-                          .image
-                        .user-profile
-                          = link_to do
-                            %h3.name
-                              蛯原 健
-                          .job
-                            リブライトパートナーズ 代表パートナー
-                            %span 2時間前
-                      .comment_container__header--right
-                        .drop-down-button
-                          %div ⋮
-                  .comment_text
-                    .comment_text-wrap
-                      90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
-                    .like-panel
-                      .like
-                        .like-wrapper
-                          = image_tag "like.png"
-                          .count 10
-                          .like-label Likes
-              %hr/
-              .comment_container
-                .comment-container-wrap
-                  %div
-                    .comment_container__header
-                      .comment_container__header--left
-                        = link_to do
-                          .image
-                        .user-profile
-                          = link_to do
-                            %h3.name
-                              蛯原 健
-                          .job
-                            リブライトパートナーズ 代表パートナー
-                            %span 2時間前
-                      .comment_container__header--right
-                        .drop-down-button
-                          %div ⋮
-                  .comment_text
-                    .comment_text-wrap
-                      90年代にこれからは燃料電池やEVという風潮と、「すぐにでも実現できまっせ」とか言う怪しい会社の口車に乗せられてビジョンAコンセプトをいち早く発表したダイムラー。当時の最先端でした。カーシェアリングも考慮してるスマート含め、「真にクルマのサスティナビリティを語るベンツ、スゲーな」って思いました。フタを開けてみるとまだまだ実用化には程遠く、ワザワザ燃料電池セル搭載の為にフロア二階建ての高重心設計にしたのに、普通のエンジン載せざるを得なくなったAクラスを発売して、そのポンコツ具合に世界中から非難され、トドメにエルクテストで横転して欠陥車まで言われた話から早25年。今やメルセデスベンツの広報資料にも書かれない黒歴史。もっと宣伝すればいいのに。「CASEはウチがいち早く考えてたぞ」って。そんなダイムラーも参加の水素協議会。隔世の感がありますね。
-                    .like-panel
-                      .like
-                        .like-wrapper
-                          = image_tag "like.png"
-                          .count 10
-                          .like-label Likes
-

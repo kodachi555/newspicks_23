@@ -7,17 +7,30 @@
     .news-title
       = news.title
     .picker-space
-      .picker-space__top
-        .picker-space__top__left
-        .picker-space__top__right
-          .top
-            山田太郎
-          .bottom
-            第一生命経済研究所　経済学部
-      .picker-space__bottom
-        .comment
-          コーラ
-          コーラ
+      - if news.picks.last.present?
+        .picker-space__top
+          .picker-space__top__left
+            - if news.picks.last.user.avatar.present?
+              %img{style: "background-image: url('#{news.picks.last.user.avatar}')"}
+            - else
+              %img
+          .picker-space__top__right
+            .top
+              = news.picks.last.user.username
+            .bottom
+              = news.picks.last.user.company
+        .picker-space__bottom
+          .comment
+            = news.picks.last.text
+      - else
+        .picker-space__top
+          .picker-space__top__left
+          .picker-space__top__right
+            .top
+            .bottom
+        .picker-space__bottom
+          .comment
+            まだPickはありません
     / %ul.picker-list
     /   %li.picker-list__avatar
     /   %li.picker-list__avatar
@@ -25,4 +38,4 @@
       .news-site
         = news.site_name
       .pick-time
-        22年前
+        = time_ago_in_words(news.created_at) + "前"

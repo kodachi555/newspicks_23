@@ -1,0 +1,4 @@
+= form_for(current_user.following_relationships.build(following_id: @user.id), remote: true) do |f|
+  = f.hidden_field :following_id
+  %button
+    = image_tag "follow-button-off.5076162e.png"

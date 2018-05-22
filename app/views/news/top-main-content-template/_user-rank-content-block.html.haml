@@ -3,19 +3,36 @@
   .index
     .rank-area
       .number
-        1
+        = i
     .user-avatar
-      %img{style: "background-image: url('https://newspicks.com/users/100616/cover?width=100&height=100&t=20180406010046000')"}
+      - if user.avatar.present?
+        %img{style: "background-image: url('#{user.avatar}')"}
+      - else
+        %img
     .user-info
       .name
-        ホリエモン
+        = user.username
       .title
-        SNS media & commentator
+        = user.company
+        = user.position
       .following-count
         .left-area
           週間 Liked ユーザー数:
         .right-area
-          1000
+          = user.picks.all.sum(:likes_count)
     .following
-      = image_tag "follow-button-off.5076162e.png"
+      - if user_signed_in?
+        - if current_user.id == user.id
+        - else
+          - unless current_user.id == user.id
+            #follow_form
+              - if current_user.following?(user)
+                = form_for(current_user.following_relationships.find_by(following_id: user.id), html: {method: :delete}) do |f|
+                  %button
+                    = image_tag "follow-button-on"
+              - else
+                = form_for(current_user.following_relationships.build(following_id: user.id)) do |f|
+                  = f.hidden_field :following_id
+                  %button
+                    = image_tag "follow-button-off.5076162e.png"
 

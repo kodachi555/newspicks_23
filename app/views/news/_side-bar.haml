@@ -1,102 +1,166 @@
 / 左サイドバー始まり
 .pick-stream.fixed-left
   .stream-container
-    .user-profile-tile
-      %a{"data-user" => "#", :href => "#"}
-        .user-header
-          .user-icon
-            %img{:src => "https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000"}/
-          .user-info
-            .user-name 苗字 名前
-            .user-title 会社名 役職
+    - if user_signed_in?
+      .user-profile-tile
+        %a{"data-user" => "#", :href => "/users/#{current_user.id}"}
+          .user-header
+            .user-icon
+              - if current_user.avatar.present?
+                = image_tag current_user.avatar
+              - else
+                %img
+            .user-info
+              .user-name
+                = current_user.username
+              .user-title
+                = current_user.company
+                = current_user.position
+        / フォローインフォーはじまり
+        .follow-info
+          %a{:href => "#"}
+            .user-profile-following
+              .follow-count
+                = current_user.followings.count
+              .follow-caption フォロー
+          %a{:href => "#"}
+            .user-profile-follower
+              .follow-count
+                = current_user.followers.count
+              .follow-caption フォロワー
+        / フォローインフォー終わり
+      .mynewss
+        .mynews
+          %a{:href => "#"}
+            %p.mynews-edit
+              マイニュースを作ろう
+              %span#sankaku &gt;
+            %p.mynews-customize 興味に合わせてカスタマイズできます
             / ログインしていない場合
-            / .user-noaccountname No Account
-            / %a{:href => "#"}
-            /   .user-noaccountname-title アカウントを作成する
-      / フォローインフォーはじまり
-      .follow-info
-        %a{:href => "#"}
-          .user-profile-following
-            .follow-count 0
-            .follow-caption フォロー
-        %a{:href => "#"}
-          .user-profile-follower
-            .follow-count 0
-            .follow-caption フォロワー
-      / フォローインフォー終わり
-    .mynewss
-      .mynews
-        %a{:href => "#"}
-          %p.mynews-edit
-            マイニュースを作ろう
-            %span#sankaku &gt;
-          %p.mynews-customize 興味に合わせてカスタマイズできます
-          / ログインしていない場合
-          / %p.mynews-noaccount-edit 人気ユーザー
-    .timeline
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-      .picker
-        .picker-img
-          %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
-        .picker-name 苗字aaa 名前
-        .picker-time 0分前
-        .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
-        .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
-        .wopicksimasita をPickしました。
-  / 左サイドバー終わり
+            / %p.mynews-noaccount-edit 人気ユーザー
+      .timeline
+        - @following_picks.each do |pick|
+          .picker
+            .picker-img
+              - if pick.user.avatar.present?
+                = image_tag pick.user.avatar
+              - else
+                %img
+            .picker-name
+              = pick.user.username
+            .picker-time
+              = time_ago_in_words(pick.created_at) + "前"
+            .picker-kansou
+              = pick.text
+
+            .picker-news
+              = link_to "#{pick.product.title}", "/news/#{pick.product.id}"
+            .wopicksimasita をPickしました。
+          / 左サイドバー終わり
+    - else
+      .user-profile-tile
+        %a{"data-user" => "#", :href => ""}
+          .user-header
+            .user-icon
+              %img{:src => "https://newspicks.com/users/3312248/cover?width=96&height=96&circle=true&t=20180402041752000"}/
+            .user-info
+              / ログインしていない場合
+              .user-noaccountname No Account
+              .user-noaccountname-title
+                = link_to "アカウントを作成する", new_user_registration_path
+        / フォローインフォーはじまり
+        .follow-info
+          %a{:href => "#"}
+            .user-profile-following
+              .follow-count 0
+              .follow-caption フォロー
+          %a{:href => "#"}
+            .user-profile-follower
+              .follow-count 0
+              .follow-caption フォロワー
+        / フォローインフォー終わり
+      .mynewss
+        .mynews
+          %a{:href => "#"}
+            %p.mynews-edit
+              マイニュースを作ろう
+              %span#sankaku &gt;
+            %p.mynews-customize 興味に合わせてカスタマイズできます
+            / ログインしていない場合
+            / %p.mynews-noaccount-edit 人気ユーザー
+      .timeline
+        - @popu_picks.each do |pick|
+          .picker
+            .picker-img
+              - if pick.user.avatar.present?
+                %img{:src => "#{pick.user.avatar}"}/
+              - else
+                %img
+            .picker-name
+              = pick.user.username
+            .picker-time
+              = time_ago_in_words(pick.created_at) + "前"
+            .picker-kansou
+              = pick.text
+            .picker-news
+              = link_to "#{pick.product.title}", "/news/#{pick.product.id}"
+            .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    /     .picker
+    /       .picker-img
+    /         %img{:src => "https://newspicks.com/users/1776183/cover?width=56&height=56&t=20180402024100000"}/
+    /       .picker-name 苗字aaa 名前
+    /       .picker-time 0分前
+    /       .picker-kansou 記事の感想は長い場合途切れるようにしています記事の感想は長い場合途切れるようにしています
+    /       .picker-news 記事のタイトルは長い場合途切れるようにしています記事のタイトルは長い場合途切れるようにしています
+    /       .wopicksimasita をPickしました。
+    / / 左サイドバー終わり
+
 

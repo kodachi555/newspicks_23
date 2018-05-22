@@ -1,0 +1,2 @@
+$("#like-buttons").html("<%= j(render partial: 'news/like', locals: {pick: @pick, picks: @picks, likes: @likes}) %>");
+// $("#like-buttons").html("<%= escape_javascript(render('news/like-button')) %>");
